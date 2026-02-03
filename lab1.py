@@ -22,7 +22,8 @@ for pokemon in pokemon_list:
         'weight': pokemon_data['weight'],
         'hp': pokemon_data['stats'][0]['base_stat'],
         'attack': pokemon_data['stats'][1]['base_stat'],
-        'defense': pokemon_data['stats'][2]['base_stat']
+        'defense': pokemon_data['stats'][2]['base_stat'],
+        'type': pokemon_data['types'][0]['type']['name']
     }
 
     data.append(pokemon_info)
@@ -33,6 +34,15 @@ weights = [p['weight'] for p in data]
 hp = [p['hp'] for p in data]
 attack = [p['attack'] for p in data]
 defense = [p['defense'] for p in data]
+types = [p['type'] for p in data]
+
+type_counts = {}
+
+for t in types:
+    if t in type_counts:
+        type_counts[t] += 1
+    else:
+        type_counts[t] = 1
 
 # 1. Линейный график (HP)
 plt.figure()
@@ -84,4 +94,17 @@ plt.hist(weights, bins=10)
 plt.title('Распределение веса покемонов')
 plt.xlabel('Вес')
 plt.ylabel('Количество')
+plt.show()
+
+#круговая
+plt.figure()
+
+plt.pie(
+    type_counts.values(),
+    labels=type_counts.keys(),
+    autopct='%1.1f%%',
+    startangle=90
+)
+
+plt.title('Распределение покемонов по типам')
 plt.show()
