@@ -47,6 +47,14 @@ plt.show()
 # 2. Точечная диаграмма (Рост vs Вес)
 plt.figure()
 plt.scatter(heights, weights)
+for i in range(len(names)):
+    plt.annotate(
+        names[i],                 # текст (имя покемона)
+        (heights[i], weights[i]), # координаты точки
+        textcoords="offset points",
+        xytext=(5, 5),             # смещение текста
+        fontsize=9
+    )
 plt.title('Зависимость веса от роста')
 plt.xlabel('Рост')
 plt.ylabel('Вес')
@@ -72,7 +80,7 @@ plt.show()
 
 # 5. Гистограмма (Вес)
 plt.figure()
-plt.hist(weights, bins=5)
+plt.hist(weights, bins=10)
 plt.title('Распределение веса покемонов')
 plt.xlabel('Вес')
 plt.ylabel('Количество')
