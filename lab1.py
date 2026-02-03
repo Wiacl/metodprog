@@ -28,6 +28,8 @@ for pokemon in pokemon_list:
 
     data.append(pokemon_info)
 
+print(data)
+
 names = [p['name'] for p in data]
 heights = [p['height'] for p in data]
 weights = [p['weight'] for p in data]
