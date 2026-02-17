@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ course.title }}</title>
+</head>
+<body>
+    <h1>{{ course.title }}</h1>
+    <nav>
+        <a href="/">Главная</a> |
+        <a href="/courses/">Курсы</a> |
+        <a href="/authors/">Авторы</a> |
+        <a href="/info/">Информация</a>
+    </nav>
+    
+    <p><strong>Описание:</strong> {{ course.description }}</p>
+    <p><strong>Длительность:</strong> {{ course.duration }}</p>
+    <p><strong>Автор:</strong> <a href="/author/{{ author.id }}/">{{ author.name }}</a></p>
+    
+    <p><a href="/courses/">← Назад к списку курсов</a></p>
+</body>
+</html>

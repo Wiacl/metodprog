@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ author.name }}</title>
+</head>
+<body>
+    <h1>{{ author.name }}</h1>
+    <nav>
+        <a href="/">Главная</a> |
+        <a href="/courses/">Курсы</a> |
+        <a href="/authors/">Авторы</a> |
+        <a href="/info/">Информация</a>
+    </nav>
+    
+    <p><strong>Биография:</strong> {{ author.bio }}</p>
+    <p><strong>Специализация:</strong> {{ author.specialization }}</p>
+    
+    <h2>Курсы автора:</h2>
+    <ul>
+        {% for course in courses %}
+        <li><a href="/course/{{ course.id }}/">{{ course.title }}</a></li>
+        {% empty %}
+        <li>У автора пока нет курсов</li>
+        {% endfor %}
+    </ul>
+    
+    <p><a href="/authors/">← Назад к списку авторов</a></p>
+</body>
+</html>

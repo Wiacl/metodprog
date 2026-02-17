@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список авторов</title>
+</head>
+<body>
+    <h1>Наши авторы</h1>
+    <nav>
+        <a href="/">Главная</a> |
+        <a href="/courses/">Курсы</a> |
+        <a href="/authors/">Авторы</a> |
+        <a href="/info/">Информация</a>
+    </nav>
+    
+    <ul>
+        {% for author in authors %}
+        <li>
+            <a href="/author/{{ author.id }}/">{{ author.name }}</a>
+            - {{ author.specialization }}
+        </li>
+        {% empty %}
+        <li>Нет доступных авторов</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
