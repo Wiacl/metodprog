@@ -67,7 +67,7 @@ print(f"Результат проверки пароля: {password_result}\n")
 
 # 5. E-mail с ограниченными доменами
 def validate_email_domains(email, domains):
-    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$'
     if not re.match(pattern, email):
         return False
     domain = email.split('@')[-1]
