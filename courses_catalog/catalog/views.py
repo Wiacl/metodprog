@@ -19,11 +19,12 @@ def course_detail(request, course_id):
     course = next((c for c in data.courses if c['id'] == course_id), None)
     
     if course:
-        # Находим автора курса
-        author = next((a for a in data.authors if a['id'] == course['author_id']), None)
+        # Находим ВСЕХ авторов курса по их ID из списка author_ids
+        course_authors = [a for a in data.authors if a['id'] in course['author_id']]
+        
         context = {
             'course': course,
-            'author': author
+            'authors': course_authors  # Передаем список авторов
         }
         return render(request, 'course_detail.html', context)
     else:
@@ -42,8 +43,9 @@ def author_detail(request, author_id):
     author = next((a for a in data.authors if a['id'] == author_id), None)
     
     if author:
-        # Находим курсы автора
-        author_courses = [c for c in data.courses if c['author_id'] == author_id]
+        
+        author_courses = [c for c in data.courses if author_id in c['author_id']]
+        
         context = {
             'author': author,
             'courses': author_courses

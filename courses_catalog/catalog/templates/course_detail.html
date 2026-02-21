@@ -14,7 +14,18 @@
     
     <p><strong>Описание:</strong> {{ course.description }}</p>
     <p><strong>Длительность:</strong> {{ course.duration }}</p>
-    <p><strong>Автор:</strong> <a href="/author/{{ author.id }}/">{{ author.name }}</a></p>
+    
+    <p><strong>Авторы:</strong></p>
+    <ul>
+        {% for author in authors %}
+        <li>
+            <a href="/author/{{ author.id }}/">{{ author.name }}</a>
+            ({{ author.specialization }})
+        </li>
+        {% empty %}
+        <li>Авторы не указаны</li>
+        {% endfor %}
+    </ul>
     
     <p><a href="/courses/">← Назад к списку курсов</a></p>
 </body>
