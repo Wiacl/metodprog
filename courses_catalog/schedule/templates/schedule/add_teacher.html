@@ -1,0 +1,48 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Добавить преподавателя{% endblock %}
+
+{% block content %}
+    <section>
+        <h2> Добавить преподавателя</h2>
+        
+        {% if error %}
+            <div class="error">
+                {{ error }}
+            </div>
+        {% endif %}
+        
+        <form method="post" action="{% url 'schedule:add_teacher' %}" style="max-width: 600px;">
+            {% csrf_token %}
+            
+            {% for field in form %}
+                <div style="margin-bottom: 1rem;">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small class="helptext">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% if field.errors %}
+                        <div class="error">
+                            {{ field.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            
+            <button type="submit"> Сохранить преподавателя</button>
+            <a href="{% url 'schedule:teacher_list' %}" style="display: inline-block; margin-left: 1rem; padding: 0.5rem 1rem; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px;">
+                ❌ Отмена
+            </a>
+        </form>
+        
+        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd;">
+            <h3>📚 Существующие курсы:</h3>
+            <ul>
+                {% for course in form.fields.courses.choices %}
+                    <li>{{ course.1 }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+{% endblock %}

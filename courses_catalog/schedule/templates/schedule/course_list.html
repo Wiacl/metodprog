@@ -1,0 +1,40 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Список курсов{% endblock %}
+
+{% block content %}
+    <section>
+        <h2> Список курсов</h2>
+        
+        {% if courses %}
+            {% for course in courses %}
+                <article>
+                    <h3>{{ course.title }}</h3>
+                    
+                    {% if course.description %}
+                        <p><strong> Описание:</strong> {{ course.description }}</p>
+                    {% endif %}
+                    
+                    {% if course.duration %}
+                        <p><strong> Длительность:</strong> {{ course.duration }}</p>
+                    {% endif %}
+                    
+                    <p><strong> Преподаватели:</strong></p>
+                    {% if course.teachers %}
+                        <ul>
+                            {% for teacher in course.teachers %}
+                                <li>{{ teacher.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p style="color: #6c757d; margin-left: 1rem;">У курса пока нет преподавателей</p>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        {% else %}
+            <div style="text-align: center; padding: 3rem;">
+                <p style="color: #6c757d; font-size: 1.2rem;">📭 В базе данных пока нет курсов.</p>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

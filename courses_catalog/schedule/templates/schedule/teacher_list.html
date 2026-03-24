@@ -1,0 +1,48 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Список преподавателей{% endblock %}
+
+{% block content %}
+    <section>
+        <h2> Список преподавателей</h2>
+        
+        {% if teachers %}
+            {% for teacher in teachers %}
+                <article>
+                    <h3>{{ teacher.name }}</h3>
+                    <p><strong> Email:</strong> {{ teacher.email }}</p>
+                    
+                    {% if teacher.phone %}
+                        <p><strong> Телефон:</strong> {{ teacher.phone }}</p>
+                    {% endif %}
+                    
+                    {% if teacher.specialization %}
+                        <p><strong> Специализация:</strong> {{ teacher.specialization }}</p>
+                    {% endif %}
+                    
+                    {% if teacher.bio %}
+                        <p><strong> Биография:</strong> {{ teacher.bio }}</p>
+                    {% endif %}
+                    
+                    <p><strong> Курсы:</strong></p>
+                    {% if teacher.courses %}
+                        <ul>
+                            {% for course in teacher.courses %}
+                                <li>{{ course.title }} ({{ course.duration }})</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p style="color: #6c757d; margin-left: 1rem;">У преподавателя пока нет курсов</p>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        {% else %}
+            <div style="text-align: center; padding: 3rem;">
+                <p style="color: #6c757d; font-size: 1.2rem;">📭 В базе данных пока нет преподавателей.</p>
+                <a href="{% url 'schedule:add_teacher' %}" class="button" style="display: inline-block; margin-top: 1rem;">
+                     Добавить первого преподавателя
+                </a>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}
