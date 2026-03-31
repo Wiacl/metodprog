@@ -135,10 +135,7 @@ class TeacherForm(forms.Form):
         allowed_domains = ['gmail.com', 'yandex.ru', 'mail.ru', 'example.com', 'edu.ru']
         domain = email.split('@')[1] if '@' in email else ''
         
-        # Это предупреждение, не ошибка - можно убрать, если не нужно
-        # if domain not in allowed_domains:
-        #     raise ValidationError(f'Домен {domain} не в списке разрешенных. Разрешены: {", ".join(allowed_domains)}')
-        
+       
         return email
     
     def clean_phone(self):
@@ -161,8 +158,7 @@ class TeacherForm(forms.Form):
         phone_patterns = [
             r'^\+?7[\s\-\(]?\d{3}[\s\-\)]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$',  # Российские номера
             r'^8[\s\-]?\d{3}[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$',  # Российские номера с 8
-            r'^\+?\d{10,15}$',  # Международные номера
-            r'^\d{3}[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$',  # 123-456-78-90
+            
         ]
         
         # Проверяем соответствует ли номер хотя бы одному паттерну
@@ -195,8 +191,8 @@ class TeacherForm(forms.Form):
         if full_name and email:
             first_name = full_name.split()[0].lower() if full_name.split() else ''
             if first_name in email.lower():
-                # Это предупреждение, не ошибка - можно добавить или убрать
-                # self.add_warning('email', 'Email содержит имя преподавателя, это может быть небезопасно')
+                
+            
                 pass
         
         return cleaned_data
