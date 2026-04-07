@@ -20,7 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('catalog.urls')),
-    path('schedule/', include('schedule.urls')),
+    path('schedule/', include('schedule.urls'))
 ]
 
 handler404 = 'catalog.views.custom_404'

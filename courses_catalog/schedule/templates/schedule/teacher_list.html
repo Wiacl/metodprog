@@ -3,46 +3,53 @@
 {% block title %}Список преподавателей{% endblock %}
 
 {% block content %}
-    <section>
-        <h2> Список преподавателей</h2>
-        
-        {% if teachers %}
-            {% for teacher in teachers %}
-                <article>
-                    <h3>{{ teacher.name }}</h3>
-                    <p><strong> Email:</strong> {{ teacher.email }}</p>
-                    
-                    {% if teacher.phone %}
-                        <p><strong> Телефон:</strong> {{ teacher.phone }}</p>
-                    {% endif %}
-                    
-                    {% if teacher.specialization %}
-                        <p><strong> Специализация:</strong> {{ teacher.specialization }}</p>
-                    {% endif %}
-                    
-                    {% if teacher.bio %}
-                        <p><strong> Биография:</strong> {{ teacher.bio }}</p>
-                    {% endif %}
-                    
-                    <p><strong> Курсы:</strong></p>
-                    {% if teacher.courses %}
-                        <ul>
-                            {% for course in teacher.courses %}
-                                <li>{{ course.title }} ({{ course.duration }})</li>
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                        <p style="color: #6c757d; margin-left: 1rem;">У преподавателя пока нет курсов</p>
-                    {% endif %}
-                </article>
-            {% endfor %}
-        {% else %}
-            <div style="text-align: center; padding: 3rem;">
-                <p style="color: #6c757d; font-size: 1.2rem;">📭 В базе данных пока нет преподавателей.</p>
-                <a href="{% url 'schedule:add_teacher' %}" class="button" style="display: inline-block; margin-top: 1rem;">
-                     Добавить первого преподавателя
-                </a>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Преподаватели</h1>
+    <a href="{% url 'schedule:teacher_create' %}" class="btn btn-primary">Добавить преподавателя</a>
+</div>
+
+<div class="row">
+    {% for teacher in teachers %}
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ teacher.first_name }} {{ teacher.last_name }}</h5>
+                <p class="card-text">
+                    <strong>Email:</strong> {{ teacher.email }}<br>
+                    <strong>Телефон:</strong> {{ teacher.phone|default:"Не указан" }}<br>
+                    <strong>Дата найма:</strong> {{ teacher.hire_date }}<br>
+                    <strong>Статус:</strong> {% if teacher.is_active %}Активен{% else %}Неактивен{% endif %}
+                </p>
+                <a href="{% url 'schedule:teacher_detail' teacher.pk %}" class="btn btn-info btn-sm">Подробнее</a>
+                <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="btn btn-warning btn-sm">Редактировать</a>
+                <a href="{% url 'schedule:teacher_delete' teacher.pk %}" class="btn btn-danger btn-sm">Удалить</a>
             </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col">
+        <div class="alert alert-info">Преподаватели не найдены</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Предыдущая</a></li>
         {% endif %}
-    </section>
+        
+        {% for num in page_obj.paginator.page_range %}
+        <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+        </li>
+        {% endfor %}
+        
+        {% if page_obj.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Следующая</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 {% endblock %}

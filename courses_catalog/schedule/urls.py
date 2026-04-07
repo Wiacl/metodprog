@@ -1,19 +1,30 @@
 from django.urls import path
 from . import views
 
-# Пространство имен для приложения
 app_name = 'schedule'
 
 urlpatterns = [
-    # Список преподавателей
-    path('teachers/', views.teacher_list, name='teacher_list'),
+    # Teacher URLs
+    path('teachers/', views.TeacherListView.as_view(), name='teacher_list'),
+    path('teachers/<int:pk>/', views.TeacherDetailView.as_view(), name='teacher_detail'),
+    path('teachers/create/', views.TeacherCreateView.as_view(), name='teacher_create'),
+    path('teachers/<int:pk>/update/', views.TeacherUpdateView.as_view(), name='teacher_update'),
+    path('teachers/<int:pk>/delete/', views.TeacherDeleteView.as_view(), name='teacher_delete'),
     
-    # Список курсов
-    path('courses/', views.course_list, name='course_list'),
+    # Course URLs
+    path('courses/', views.CourseListView.as_view(), name='course_list'),
+    path('courses/create/', views.CourseCreateView.as_view(), name='course_create'),
+    path('courses/<int:pk>/update/', views.CourseUpdateView.as_view(), name='course_update'),
+    path('courses/<int:pk>/delete/', views.CourseDeleteView.as_view(), name='course_delete'),
     
-    # Добавление преподавателя
-    path('add-teacher/', views.add_teacher, name='add_teacher'),
+    # Student URLs
+    path('students/', views.StudentListView.as_view(), name='student_list'),
+    path('students/<int:pk>/', views.StudentDetailView.as_view(), name='student_detail'),  # ЭТОТ МАРШРУТ БЫЛ ОТСУТСТВУЕТ
+    path('students/<int:pk>/update/', views.StudentUpdateView.as_view(), name='student_update'),
+    path('students/<int:pk>/delete/', views.StudentDeleteView.as_view(), name='student_delete'),
+    path('students/<int:pk>/enroll/', views.StudentEnrollView.as_view(), name='student_enroll'),
+    path('students/<int:pk>/unenroll/', views.StudentUnenrollView.as_view(), name='student_unenroll'),
     
-    # Добавление курса
-    path('add-course/', views.add_course, name='add_course'),
+    # ORM Queries
+    path('orm-queries/', views.ORMQueriesView.as_view(), name='orm_queries'),
 ]

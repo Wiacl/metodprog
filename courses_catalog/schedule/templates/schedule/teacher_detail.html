@@ -1,0 +1,131 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Информация о преподавателе{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>{{ teacher.first_name }} {{ teacher.last_name }}</h1>
+        <div>
+            <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="btn btn-warning">Редактировать</a>
+            <a href="{% url 'schedule:teacher_delete' teacher.pk %}" class="btn btn-danger">Удалить</a>
+            <a href="{% url 'schedule:teacher_list' %}" class="btn btn-secondary">Назад</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>Основная информация</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Имя:</th>
+                            <td>{{ teacher.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Фамилия:</th>
+                            <td>{{ teacher.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>{{ teacher.email }}</td>
+                        </tr>
+                        <tr>
+                            <th>Телефон:</th>
+                            <td>{{ teacher.phone|default:"Не указан" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Дата найма:</th>
+                            <td>{{ teacher.hire_date }}</td>
+                        </tr>
+                        <tr>
+                            <th>Статус:</th>
+                            <td>{% if teacher.is_active %}<span class="badge bg-success">Активен</span>{% else %}<span class="badge bg-danger">Неактивен</span>{% endif %}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>Профессиональная информация</h3>
+                </div>
+                <div class="card-body">
+                    {% if teacher.info %}
+                    <table class="table">
+                        <tr>
+                            <th>Ученая степень:</th>
+                            <td>{{ teacher.info.get_degree_display }}</td>
+                        </tr>
+                        <tr>
+                            <th>Специализация:</th>
+                            <td>{{ teacher.info.specialization }}</td>
+                        </tr>
+                        <tr>
+                            <th>Лет опыта:</th>
+                            <td>{{ teacher.info.years_of_experience }}</td>
+                        </tr>
+                        <tr>
+                            <th>Кабинет:</th>
+                            <td>{{ teacher.info.office_number|default:"Не указан" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Биография:</th>
+                            <td>{{ teacher.info.bio|default:"Не указана"|linebreaks }}</td>
+                        </tr>
+                    </table>
+                    {% else %}
+                    <div class="alert alert-info">
+                        Профессиональная информация не заполнена
+                        <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="alert-link">Заполнить</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Курсы преподавателя</h3>
+        </div>
+        <div class="card-body">
+            {% if teacher.courses.all %}
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Название курса</th>
+                            <th>Уровень</th>
+                            <th>Кредиты</th>
+                            <th>Студентов</th>
+                            <th>Даты</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for course in teacher.courses.all %}
+                        <tr>
+                            <td>{{ course.title }}</td>
+                            <td>{{ course.get_level_display }}</td>
+                            <td>{{ course.credits }}</td>
+                            <td>{{ course.students.count }}/{{ course.max_students }}</td>
+                            <td>{{ course.start_date }} - {{ course.end_date }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="alert alert-info">
+                У преподавателя пока нет курсов
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

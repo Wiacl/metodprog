@@ -1,0 +1,132 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Информация о студенте{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>{{ student.first_name }} {{ student.last_name }} {% if student.patronymic %}{{ student.patronymic }}{% endif %}</h1>
+        <div>
+            <a href="{% url 'schedule:student_update' student.pk %}" class="btn btn-warning">Редактировать</a>
+            <a href="{% url 'schedule:student_delete' student.pk %}" class="btn btn-danger">Удалить</a>
+            <a href="{% url 'schedule:student_list' %}" class="btn btn-secondary">Назад</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>Основная информация</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Фамилия:</th>
+                            <td>{{ student.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Имя:</th>
+                            <td>{{ student.first_name }}</td>
+                        </tr>
+                        {% if student.patronymic %}
+                        <tr>
+                            <th>Отчество:</th>
+                            <td>{{ student.patronymic }}</td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <th>Email:</th>
+                            <td>{{ student.email }}</td>
+                        </tr>
+                        <tr>
+                            <th>Телефон:</th>
+                            <td>{{ student.phone|default:"Не указан" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Дата рождения:</th>
+                            <td>{{ student.date_of_birth }}</td>
+                        </tr>
+                        <tr>
+                            <th>Адрес:</th>
+                            <td>{{ student.address|default:"Не указан" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Дата зачисления:</th>
+                            <td>{{ student.enrollment_date }}</td>
+                        </tr>
+                        <tr>
+                            <th>Статус:</th>
+                            <td>{% if student.is_active %}<span class="badge bg-success">Активен</span>{% else %}<span class="badge bg-danger">Неактивен</span>{% endif %}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3>Записан на курсы</h3>
+                </div>
+                <div class="card-body">
+                    {% if student.courses.all %}
+                        <div class="list-group">
+                            {% for course in student.courses.all %}
+                            <div class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">{{ course.title }}</h5>
+                                        <p class="mb-1">Преподаватель: {% if course.teacher %}{{ course.teacher.first_name }} {{ course.teacher.last_name }}{% else %}Не назначен{% endif %}</p>
+                                        <small>{{ course.start_date }} - {{ course.end_date }}</small>
+                                    </div>
+                                    <form method="post" action="{% url 'schedule:student_unenroll' student.pk %}" style="display: inline;">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="course_id" value="{{ course.pk }}">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Отписать студента от курса {{ course.title }}?')">Отписать</button>
+                                    </form>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info">
+                            Студент не записан ни на один курс
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Доступные курсы для записи</h3>
+                </div>
+                <div class="card-body">
+                    {% with available_courses=student.get_available_courses %}
+                        {% if available_courses %}
+                            <form method="post" action="{% url 'schedule:student_enroll' student.pk %}">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <select name="course_id" class="form-select" required>
+                                        <option value="">Выберите курс</option>
+                                        {% for course in available_courses %}
+                                            <option value="{{ course.pk }}">
+                                                {{ course.title }} ({{ course.teacher.first_name }} {{ course.teacher.last_name }})
+                                            </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Записать на курс</button>
+                            </form>
+                        {% else %}
+                            <div class="alert alert-success">
+                                Студент уже записан на все доступные курсы
+                            </div>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

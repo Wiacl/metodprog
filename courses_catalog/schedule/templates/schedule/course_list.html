@@ -3,38 +3,84 @@
 {% block title %}Список курсов{% endblock %}
 
 {% block content %}
-    <section>
-        <h2> Список курсов</h2>
-        
-        {% if courses %}
-            {% for course in courses %}
-                <article>
-                    <h3>{{ course.title }}</h3>
-                    
-                    {% if course.description %}
-                        <p><strong> Описание:</strong> {{ course.description }}</p>
-                    {% endif %}
-                    
-                    {% if course.duration %}
-                        <p><strong> Длительность:</strong> {{ course.duration }}</p>
-                    {% endif %}
-                    
-                    <p><strong> Преподаватели:</strong></p>
-                    {% if course.teachers %}
-                        <ul>
-                            {% for teacher in course.teachers %}
-                                <li>{{ teacher.name }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                        <p style="color: #6c757d; margin-left: 1rem;">У курса пока нет преподавателей</p>
-                    {% endif %}
-                </article>
-            {% endfor %}
-        {% else %}
-            <div style="text-align: center; padding: 3rem;">
-                <p style="color: #6c757d; font-size: 1.2rem;">📭 В базе данных пока нет курсов.</p>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Курсы</h1>
+    <a href="{% url 'schedule:course_create' %}" class="btn btn-primary">Добавить курс</a>
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <form method="get" class="row g-3">
+            <div class="col-auto">
+                <label for="teacher" class="form-label">Фильтр по преподавателю:</label>
             </div>
+            <div class="col-auto">
+                <select name="teacher" id="teacher" class="form-select" onchange="this.form.submit()">
+                    <option value="">Все преподаватели</option>
+                    {% for teacher in teachers %}
+                    <option value="{{ teacher.pk }}" {% if selected_teacher|stringformat:"s" == teacher.pk|stringformat:"s" %}selected{% endif %}>
+                        {{ teacher.first_name }} {{ teacher.last_name }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% if selected_teacher %}
+            <div class="col-auto">
+                <a href="{% url 'schedule:course_list' %}" class="btn btn-secondary">Сбросить фильтр</a>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    {% for course in courses %}
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ course.title }}</h5>
+                <p class="card-text">
+                    <strong>Преподаватель:</strong> 
+                    {% if course.teacher %}
+                        {{ course.teacher.first_name }} {{ course.teacher.last_name }}
+                    {% else %}
+                        <span class="text-muted">Не назначен</span>
+                    {% endif %}<br>
+                    <strong>Уровень:</strong> {{ course.get_level_display }}<br>
+                    <strong>Кредиты:</strong> {{ course.credits }}<br>
+                    <strong>Студентов:</strong> {{ course.students.count }}/{{ course.max_students }}<br>
+                    <strong>Даты:</strong> {{ course.start_date }} - {{ course.end_date }}<br>
+                    <strong>Статус:</strong> {% if course.is_active %}Активен{% else %}Неактивен{% endif %}
+                </p>
+                <a href="{% url 'schedule:course_update' course.pk %}" class="btn btn-warning btn-sm">Редактировать</a>
+                <a href="{% url 'schedule:course_delete' course.pk %}" class="btn btn-danger btn-sm">Удалить</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col">
+        <div class="alert alert-info">Курсы не найдены</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if selected_teacher %}&teacher={{ selected_teacher }}{% endif %}">Предыдущая</a></li>
         {% endif %}
-    </section>
+        
+        {% for num in page_obj.paginator.page_range %}
+        <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+            <a class="page-link" href="?page={{ num }}{% if selected_teacher %}&teacher={{ selected_teacher }}{% endif %}">{{ num }}</a>
+        </li>
+        {% endfor %}
+        
+        {% if page_obj.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}{% if selected_teacher %}&teacher={{ selected_teacher }}{% endif %}">Следующая</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 {% endblock %}

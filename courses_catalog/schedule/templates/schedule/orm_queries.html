@@ -1,0 +1,140 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}ORM Запросы - Демонстрация{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">ORM Запросы Django</h1>
+    
+    <div class="alert alert-info">
+        <h4>📊 Статистика базы данных:</h4>
+        <ul>
+            <li>Преподавателей: {{ teachers_count }}</li>
+            <li>Курсов: {{ courses_count }}</li>
+            <li>Студентов: {{ students_count }}</li>
+        </ul>
+    </div>
+    
+    <!-- Запрос 1: Все студенты курса -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h3>📚 Запрос 1: Все студенты курса</h3>
+            <code class="text-white">Course.objects.first().students.all()</code>
+        </div>
+        <div class="card-body">
+            {% if course %}
+                <h5>Курс: {{ course.title }}</h5>
+                {% if course_students %}
+                    <ul class="list-group">
+                        {% for student in course_students %}
+                        <li class="list-group-item">
+                            {{ student.first_name }} {{ student.last_name }} 
+                            {% if student.patronymic %}{{ student.patronymic }}{% endif %}
+                            ({{ student.email }})
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div class="alert alert-info">На этот курс еще никто не записан</div>
+                {% endif %}
+            {% else %}
+                <div class="alert alert-warning">В базе данных нет ни одного курса</div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- Запрос 2: Преподаватели с количеством курсов > 2 -->
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">
+            <h3>👨‍🏫 Запрос 2: Преподаватели, у которых больше 2 курсов</h3>
+            <code class="text-white">Teacher.objects.annotate(course_count=Count('courses')).filter(course_count__gt=2)</code>
+        </div>
+        <div class="card-body">
+            {% if teachers_with_many_courses %}
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Преподаватель</th>
+                            <th>Email</th>
+                            <th>Количество курсов</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for teacher in teachers_with_many_courses %}
+                        <tr>
+                            <td>>{{ teacher.last_name }} {{ teacher.first_name }} {{ teacher.patronymic|default:"" }}</td>
+                            <td>{{ teacher.email }}</td>
+                            <td><span class="badge bg-info">{{ teacher.courses.count }}</span></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <div class="alert alert-info">
+                    {% if teachers_count > 0 %}
+                        Нет преподавателей, у которых больше 2 курсов
+                    {% else %}
+                        В базе данных нет преподавателей
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- Запрос 3: Студенты без курсов -->
+    <div class="card mb-4">
+        <div class="card-header bg-warning">
+            <h3>🎓 Запрос 3: Студенты без курсов</h3>
+            <code>Student.objects.filter(courses__isnull=True)</code>
+        </div>
+        <div class="card-body">
+            {% if students_without_courses %}
+                <ul class="list-group">
+                    {% for student in students_without_courses %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ student.last_name }} {{ student.first_name }} {{ student.patronymic|default:"" }} ({{ student.email }})
+                        <a href="{% url 'schedule:student_update' student.pk %}" class="btn btn-sm btn-primary">Записать на курс</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="alert alert-success">
+                    {% if students_count > 0 %}
+                        Все студенты записаны хотя бы на один курс! 🎉
+                    {% else %}
+                        В базе данных нет студентов
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- Запрос 4: Преподаватели без профиля -->
+    <div class="card mb-4">
+        <div class="card-header bg-danger text-white">
+            <h3>📝 Запрос 4: Преподаватели без профиля</h3>
+            <code class="text-white">Teacher.objects.filter(info__isnull=True)</code>
+        </div>
+        <div class="card-body">
+            {% if teachers_without_profile %}
+                <ul class="list-group">
+                    {% for teacher in teachers_without_profile %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ teacher.last_name }} {{ teacher.first_name }} {{ teacher.patronymic|default:"" }} ({{ teacher.email }})
+                        <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="btn btn-sm btn-warning">Заполнить профиль</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="alert alert-success">
+                    {% if teachers_count > 0 %}
+                        У всех преподавателей заполнены профили! 🎉
+                    {% else %}
+                        В базе данных нет преподавателей
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
