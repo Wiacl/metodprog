@@ -3,8 +3,11 @@
 {% block title %}Список студентов{% endblock %}
 
 {% block content %}
+
+
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h1>Студенты</h1>
+    <a href="{% url 'schedule:student_create' %}" class="btn btn-primary">Добавить студента</a>  <!-- ДОБАВЬТЕ ЭТУ КНОПКУ -->
 </div>
 
 <div class="row">

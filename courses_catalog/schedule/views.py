@@ -133,7 +133,7 @@ class CourseDeleteView(DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
-# Student Views
+# Student Views добавить Create
 class StudentListView(ListView):
     model = Student
     template_name = 'schedule/student_list.html'
@@ -151,6 +151,16 @@ class StudentDetailView(DetailView):
         context['available_courses'] = Course.objects.exclude(id__in=self.object.courses.all())
         return context
 
+class StudentCreateView(CreateView):  
+    """Создание нового студента"""
+    model = Student
+    form_class = StudentForm
+    template_name = 'schedule/student_form.html'
+    success_url = reverse_lazy('schedule:student_list')
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Студент успешно создан')
+        return super().form_valid(form)
 
 class StudentUpdateView(UpdateView):
     model = Student
