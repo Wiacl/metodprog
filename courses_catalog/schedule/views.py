@@ -22,15 +22,40 @@ class TeacherDetailView(DetailView):
     context_object_name = 'teacher'
 
 
-class TeacherCreateView(CreateView):
-    model = Teacher
-    form_class = TeacherForm
-    template_name = 'schedule/teacher_form.html'
-    success_url = reverse_lazy('schedule:teacher_list')
-
-    def form_valid(self, form):
-        messages.success(self.request, 'Преподаватель успешно создан')
-        return super().form_valid(form)
+class TeacherCreateView(View):  # Изменено с CreateView на View для явной реализации
+    """Создание преподавателя с явной обработкой GET и POST"""
+    
+    def get(self, request):
+        """При GET-запросе - отображать пустую форму"""
+        form = TeacherForm()
+        info_form = TeacherInfoForm()
+        return render(request, 'schedule/teacher_form.html', {
+            'form': form,
+            'info_form': info_form
+        })
+    
+    def post(self, request):
+        """При POST - обработать данные формы"""
+        # Создать объект формы с данными из request.POST
+        form = TeacherForm(request.POST)
+        info_form = TeacherInfoForm(request.POST)
+        
+        # Проверить form.is_valid()
+        if form.is_valid() and info_form.is_valid():
+            # Если данные валидны - сохранить преподавателя
+            teacher = form.save()
+            info = info_form.save(commit=False)
+            info.teacher = teacher
+            info.save()
+            messages.success(request, 'Преподаватель успешно создан')
+            return redirect('schedule:teacher_list')
+        else:
+            # Если нет - отобразить ошибки
+            messages.error(request, 'Пожалуйста, исправьте ошибки в форме')
+            return render(request, 'schedule/teacher_form.html', {
+                'form': form,
+                'info_form': info_form
+            })
 
 
 class TeacherUpdateView(UpdateView):
@@ -133,7 +158,7 @@ class CourseDeleteView(DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
-# Student Views добавить Create
+# Student Views
 class StudentListView(ListView):
     model = Student
     template_name = 'schedule/student_list.html'
@@ -151,6 +176,7 @@ class StudentDetailView(DetailView):
         context['available_courses'] = Course.objects.exclude(id__in=self.object.courses.all())
         return context
 
+
 class StudentCreateView(CreateView):  
     """Создание нового студента"""
     model = Student
@@ -161,6 +187,7 @@ class StudentCreateView(CreateView):
     def form_valid(self, form):
         messages.success(self.request, 'Студент успешно создан')
         return super().form_valid(form)
+
 
 class StudentUpdateView(UpdateView):
     model = Student

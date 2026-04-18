@@ -3,12 +3,11 @@ from .models import Teacher, TeacherInfo, Course, Student
 
 
 class TeacherForm(forms.ModelForm):
+    """Форма для добавления преподавателя"""
+    
     class Meta:
         model = Teacher
         fields = ['first_name', 'last_name', 'patronymic', 'email', 'phone', 'hire_date', 'is_active']
-        widgets = {
-            'hire_date': forms.DateInput(attrs={'type': 'date'}),
-        }
         labels = {
             'first_name': 'Имя',
             'last_name': 'Фамилия',
@@ -18,8 +17,55 @@ class TeacherForm(forms.ModelForm):
             'hire_date': 'Дата найма',
             'is_active': 'Активен',
         }
+        help_texts = {
+            'first_name': 'Введите имя преподавателя',
+            'last_name': 'Введите фамилию преподавателя',
+            'patronymic': 'Введите отчество преподавателя (необязательно)',
+            'email': 'Введите корпоративный email',
+            'phone': 'Введите номер телефона (необязательно)',
+            'hire_date': 'Выберите дату начала работы',
+            'is_active': 'Отметьте, если преподаватель активен',
+        }
+        widgets = {
+            'first_name': forms.TextInput(attrs={
+                'placeholder': 'Например: Алексей',
+                'class': 'form-control'
+            }),
+            'last_name': forms.TextInput(attrs={
+                'placeholder': 'Например: Иванов',
+                'class': 'form-control'
+            }),
+            'patronymic': forms.TextInput(attrs={
+                'placeholder': 'Например: Петрович',
+                'class': 'form-control'
+            }),
+            'email': forms.EmailInput(attrs={
+                'placeholder': 'ivanov@university.ru',
+                'class': 'form-control'
+            }),
+            'phone': forms.TextInput(attrs={
+                'placeholder': '+7 (999) 123-45-67',
+                'class': 'form-control'
+            }),
+            'hire_date': forms.DateInput(attrs={
+                'type': 'date',
+                'class': 'form-control',
+                'placeholder': 'ГГГГ-ММ-ДД'
+            }),
+            'is_active': forms.CheckboxInput(attrs={
+                'class': 'form-check-input'
+            }),
+        }
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Делаем patronymic и phone необязательными
+        self.fields['patronymic'].required = False
+        self.fields['phone'].required = False
+        self.fields['is_active'].required = False
 
 
+# Остальные формы остаются без изменений
 class TeacherInfoForm(forms.ModelForm):
     class Meta:
         model = TeacherInfo
