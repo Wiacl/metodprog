@@ -5,7 +5,7 @@ import re
 from datetime import date
 
 
-# ========== КАСТОМНЫЕ ВАЛИДАТОРЫ ==========
+# ========== ВАЛИДАТОРЫ ==========
 
 def validate_phone_number(value):
     """Кастомный валидатор для номера телефона"""
@@ -123,7 +123,7 @@ class TeacherForm(forms.ModelForm):
                     raise ValidationError('Стаж не может быть больше, чем период работы в организации')
         return experience
     
-    # ========== МЕТОД clean() ДЛЯ ФОРМЫ ==========
+    # ========== clean() ДЛЯ ФОРМЫ ==========
     
     def clean(self):
         """Общая валидация формы"""
@@ -152,7 +152,7 @@ class TeacherForm(forms.ModelForm):
         return cleaned_data
 
 
-# ========== ФОРМА ИНФОРМАЦИИ О ПРЕПОДАВАТЕЛЕ ==========
+# ========== ФОРМА ИНФО О ПРЕПОДАВАТЕЛЕ ==========
 
 class TeacherInfoForm(forms.ModelForm):
     class Meta:

@@ -10,7 +10,7 @@ class Teacher(models.Model):
     last_name = models.CharField(max_length=50, verbose_name="Фамилия", db_index=True)
     patronymic = models.CharField(max_length=50, blank=True, null=True, verbose_name="Отчество")
     
-    # НОВЫЕ ПОЛЯ
+    # Н
     position = models.CharField(
         max_length=100,
         verbose_name="Должность",
@@ -180,7 +180,7 @@ class Student(models.Model):
     courses = models.ManyToManyField(Course, related_name='students', blank=True)
     is_active = models.BooleanField(default=True, verbose_name="Активен")
     
-    # НОВЫЕ ПОЛЯ
+    # Н
     student_id = models.CharField(
         null=True, blank=True,
         max_length=20,

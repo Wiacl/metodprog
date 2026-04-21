@@ -104,7 +104,7 @@ class TeacherDeleteView(DeleteView):
     success_url = reverse_lazy('schedule:teacher_list')
 
 
-# Course Views (аналогично для курсов)
+# Course Views 
 class CourseListView(ListView):
     model = Course
     template_name = 'schedule/course_list.html'
