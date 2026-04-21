@@ -161,6 +161,9 @@ class Course(models.Model):
         verbose_name="Выдается сертификат"
     )
     
+    def __str__(self):
+        return self.title
+    
     class Meta:
         verbose_name = "Курс"
         verbose_name_plural = "Курсы"

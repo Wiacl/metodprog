@@ -5,33 +5,71 @@
 {% block content %}
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>{{ teacher.first_name }} {{ teacher.last_name }}</h1>
+        <h1>{{ teacher.last_name }} {{ teacher.first_name }} {% if teacher.patronymic %}{{ teacher.patronymic }}{% endif %}</h1>
         <div>
-            <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="btn btn-warning">Редактировать</a>
-            <a href="{% url 'schedule:teacher_delete' teacher.pk %}" class="btn btn-danger">Удалить</a>
-            <a href="{% url 'schedule:teacher_list' %}" class="btn btn-secondary">Назад</a>
+            <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="btn btn-warning"> Редактировать</a>
+            <a href="{% url 'schedule:teacher_delete' teacher.pk %}" class="btn btn-danger"> Удалить</a>
+            <a href="{% url 'schedule:teacher_list' %}" class="btn btn-secondary"> Назад</a>
         </div>
     </div>
 
     <div class="row">
+        <!-- Левая колонка - Основная информация -->
         <div class="col-md-6">
             <div class="card mb-4">
-                <div class="card-header">
-                    <h3>Основная информация</h3>
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0"> Основная информация</h3>
                 </div>
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th style="width: 40%;">Фамилия:</th>
+                            <td>{{ teacher.last_name }}</td>
+                        </tr>
                         <tr>
                             <th>Имя:</th>
                             <td>{{ teacher.first_name }}</td>
                         </tr>
+                        {% if teacher.patronymic %}
                         <tr>
-                            <th>Фамилия:</th>
-                            <td>{{ teacher.last_name }}</td>
+                            <th>Отчество:</th>
+                            <td>{{ teacher.patronymic }}</td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <th>Должность:</th>
+                            <td>
+                                {% if teacher.position == 'assistant' %}Ассистент
+                                {% elif teacher.position == 'teacher' %}Преподаватель
+                                {% elif teacher.position == 'senior_teacher' %}Старший преподаватель
+                                {% elif teacher.position == 'docent' %}Доцент
+                                {% elif teacher.position == 'professor' %}Профессор
+                                {% else %}{{ teacher.position }}{% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Табельный номер:</th>
+                            <td><code>{{ teacher.employee_id|default:"Не указан" }}</code></td>
+                        </tr>
+                        <tr>
+                            <th>Зарплата:</th>
+                            <td>{% if teacher.salary %}{{ teacher.salary|floatformat:2 }} руб{% else %}Не указана{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>Общий стаж работы:</th>
+                            <td>{{ teacher.work_experience_years }} лет</td>
+                        </tr>
+                        <tr>
+                            <th>Рейтинг преподавателя:</th>
+                            <td>
+                                <span class="badge {% if teacher.rating >= 4.5 %}bg-success{% elif teacher.rating >= 3.5 %}bg-info{% elif teacher.rating >= 2.5 %}bg-warning{% else %}bg-danger{% endif %}">
+                                    {{ teacher.rating|default:"0" }} / 5
+                                </span>
+                            </td>
                         </tr>
                         <tr>
                             <th>Email:</th>
-                            <td>{{ teacher.email }}</td>
+                            <td><a href="mailto:{{ teacher.email }}">{{ teacher.email }}</a></td>
                         </tr>
                         <tr>
                             <th>Телефон:</th>
@@ -39,40 +77,82 @@
                         </tr>
                         <tr>
                             <th>Дата найма:</th>
-                            <td>{{ teacher.hire_date }}</td>
+                            <td>{{ teacher.hire_date|date:"d.m.Y" }}</td>
                         </tr>
                         <tr>
                             <th>Статус:</th>
-                            <td>{% if teacher.is_active %}<span class="badge bg-success">Активен</span>{% else %}<span class="badge bg-danger">Неактивен</span>{% endif %}</td>
+                            <td>
+                                {% if teacher.is_active %}
+                                    <span class="badge bg-success">Активен</span>
+                                {% else %}
+                                    <span class="badge bg-danger">Неактивен</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Дата создания:</th>
+                            <td>{{ teacher.created_at|date:"d.m.Y H:i" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Последнее обновление:</th>
+                            <td>{{ teacher.updated_at|date:"d.m.Y H:i" }}</td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
 
+        <!-- Правая колонка - Профессиональная информация -->
         <div class="col-md-6">
             <div class="card mb-4">
-                <div class="card-header">
-                    <h3>Профессиональная информация</h3>
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0"> Профессиональная информация</h3>
                 </div>
                 <div class="card-body">
                     {% if teacher.info %}
-                    <table class="table">
+                    <table class="table table-bordered">
                         <tr>
-                            <th>Ученая степень:</th>
-                            <td>{{ teacher.info.get_degree_display }}</td>
+                            <th style="width: 40%;">Ученая степень:</th>
+                            <td>
+                                {% if teacher.info.degree == 'assistant' %}Ассистент
+                                {% elif teacher.info.degree == 'senior_lecturer' %}Старший преподаватель
+                                {% elif teacher.info.degree == 'docent' %}Доцент
+                                {% elif teacher.info.degree == 'professor' %}Профессор
+                                {% else %}{{ teacher.info.degree }}{% endif %}
+                            </td>
                         </tr>
                         <tr>
                             <th>Специализация:</th>
                             <td>{{ teacher.info.specialization }}</td>
                         </tr>
                         <tr>
-                            <th>Лет опыта:</th>
-                            <td>{{ teacher.info.years_of_experience }}</td>
+                            <th>Педагогический стаж:</th>
+                            <td>{{ teacher.info.years_of_experience }} лет</td>
                         </tr>
                         <tr>
-                            <th>Кабинет:</th>
+                            <th>Количество публикаций:</th>
+                            <td>
+                                {% if teacher.info.publications_count %}
+                                    {{ teacher.info.publications_count }}
+                                    {% if teacher.info.publications_count > 100 %}
+                                        <span class="badge bg-success">🏆 Много!</span>
+                                    {% endif %}
+                                {% else %}
+                                    0
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Год получения степени:</th>
+                            <td>{{ teacher.info.scientific_degree_year|default:"Не указан" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Номер кабинета:</th>
                             <td>{{ teacher.info.office_number|default:"Не указан" }}</td>
+                        </tr>
+                        <tr>
+                            <th>Часы консультаций:</th>
+                            <td>{{ teacher.info.consulting_hours|default:"Не указаны" }}</td>
                         </tr>
                         <tr>
                             <th>Биография:</th>
@@ -80,9 +160,62 @@
                         </tr>
                     </table>
                     {% else %}
-                    <div class="alert alert-info">
-                        Профессиональная информация не заполнена
-                        <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="alert-link">Заполнить</a>
+                    <div class="alert alert-warning">
+                        <i class="bi bi-info-circle"></i> Профессиональная информация не заполнена.
+                        <a href="{% url 'schedule:teacher_update' teacher.pk %}" class="alert-link">Заполнить сейчас</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Статистика преподавателя -->
+            <div class="card mb-4">
+                <div class="card-header bg-info text-white">
+                    <h3 class="mb-0"> Статистика</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-6 mb-3">
+                            <div class="border rounded p-3">
+                                <h4 class="text-primary">{{ teacher.courses.count }}</h4>
+                                <p class="mb-0 text-muted">Ведет курсов</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="border rounded p-3">
+                                <h4 class="text-success">
+                                    {% with total_students=0 %}
+                                        {% for course in teacher.courses.all %}
+                                            {% with total_students=total_students|add:course.students.count %}{% endwith %}
+                                        {% endfor %}
+                                        {{ teacher.courses.all|length|add:0 }}
+                                    {% endwith %}
+                                    {% if teacher.courses.all %}
+                                        {% with student_count=0 %}
+                                            {% for course in teacher.courses.all %}
+                                                {% with student_count=student_count|add:course.students.count %}{% endwith %}
+                                            {% endfor %}
+                                        {% endwith %}
+                                    {% else %}
+                                        0
+                                    {% endif %}
+                                </h4>
+                                <p class="mb-0 text-muted">Всего студентов</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% if teacher.rating %}
+                    <div class="mt-3">
+                        <label class="form-label">Рейтинг преподавателя:</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ teacher.rating|floatformat:0|default:'0'|add:0 }}0%" 
+                                 aria-valuenow="{{ teacher.rating }}" aria-valuemin="0" aria-valuemax="5">
+                            </div>
+                        </div>
+                        <div class="text-center mt-1">
+                            <strong>{{ teacher.rating }}</strong> из 5
+                        </div>
                     </div>
                     {% endif %}
                 </div>
@@ -90,31 +223,46 @@
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">
-            <h3>Курсы преподавателя</h3>
+    <!-- Список курсов преподавателя -->
+    <div class="card mb-4">
+        <div class="card-header bg-dark text-white">
+            <h3 class="mb-0"> Курсы, которые ведет преподаватель</h3>
         </div>
         <div class="card-body">
             {% if teacher.courses.all %}
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>Название курса</th>
                             <th>Уровень</th>
                             <th>Кредиты</th>
                             <th>Студентов</th>
-                            <th>Даты</th>
+                            <th>Длительность</th>
+                            <th>Стоимость</th>
+                            <th>Действия</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for course in teacher.courses.all %}
                         <tr>
-                            <td>{{ course.title }}</td>
-                            <td>{{ course.get_level_display }}</td>
+                            <td><strong>{{ course.title }}</strong></td>
+                            <td>
+                                {% if course.level == 'beginner' %}
+                                    <span class="badge bg-success">Начальный</span>
+                                {% elif course.level == 'intermediate' %}
+                                    <span class="badge bg-warning">Средний</span>
+                                {% else %}
+                                    <span class="badge bg-danger">Продвинутый</span>
+                                {% endif %}
+                            </td>
                             <td>{{ course.credits }}</td>
                             <td>{{ course.students.count }}/{{ course.max_students }}</td>
-                            <td>{{ course.start_date }} - {{ course.end_date }}</td>
+                            <td>{{ course.duration_weeks }} нед.</td>
+                            <td>{% if course.price > 0 %}{{ course.price|floatformat:0 }} руб{% else %}Бесплатно{% endif %}</td>
+                            <td>
+                                <a href="{% url 'schedule:course_update' course.pk %}" class="btn btn-sm btn-warning">Редактировать</a>
+                            </td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -122,7 +270,8 @@
             </div>
             {% else %}
             <div class="alert alert-info">
-                У преподавателя пока нет курсов
+                Преподаватель пока не ведет ни одного курса.
+                <a href="{% url 'schedule:course_create' %}" class="alert-link">Назначить курс</a>
             </div>
             {% endif %}
         </div>
