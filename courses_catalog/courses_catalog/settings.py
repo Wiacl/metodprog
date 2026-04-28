@@ -57,7 +57,7 @@ ROOT_URLCONF = 'courses_catalog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,9 +121,11 @@ STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = 'users.User'
 
-LOGIN_URL = '/auth/login/'
+LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/schedule/teachers/'
 LOGOUT_REDIRECT_URL = '/schedule/teachers/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'

@@ -13,17 +13,8 @@
                 <div class="card-body">
                     {% if form.errors %}
                     <div class="alert alert-danger">
-                        <i class="bi bi-exclamation-triangle"></i>
                         Неправильное имя пользователя или пароль.
                     </div>
-                    {% endif %}
-                    
-                    {% if next %}
-                        {% if user.is_authenticated %}
-                        <div class="alert alert-warning">
-                            У вас нет доступа к этой странице.
-                        </div>
-                        {% endif %}
                     {% endif %}
                     
                     <form method="post" action="{% url 'login' %}">
@@ -31,35 +22,25 @@
                         
                         <div class="mb-3">
                             <label for="username" class="form-label">Имя пользователя</label>
-                            <input type="text" name="username" id="username" 
-                                   class="form-control" required autofocus>
+                            <input type="text" name="username" id="username" class="form-control" required>
                         </div>
                         
                         <div class="mb-3">
                             <label for="password" class="form-label">Пароль</label>
-                            <input type="password" name="password" id="password" 
-                                   class="form-control" required>
+                            <input type="password" name="password" id="password" class="form-control" required>
                         </div>
                         
-                        <input type="hidden" name="next" value="{{ next }}">
-                        
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary">
-                                Войти
-                            </button>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Войти</button>
                         </div>
                     </form>
                     
                     <hr>
                     
                     <div class="text-center">
-                        <a href="{% url 'password_reset' %}" class="text-muted">
-                            Забыли пароль?
-                        </a>
+                        <a href="{% url 'password_reset' %}" class="text-muted">Забыли пароль?</a>
                         <span class="mx-2">|</span>
-                        <a href="{% url 'users:register' %}" class="text-muted">
-                            Регистрация
-                        </a>
+                        <a href="{% url 'users:register' %}" class="text-muted">Регистрация</a>
                     </div>
                 </div>
             </div>

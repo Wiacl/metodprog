@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: vitaliy@mail.ru
+Date: Tue, 28 Apr 2026 12:38:42 +0000
+Message-ID: <177737992227.21896.17818271036096379600@1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa>
+
+
+You're receiving this email because you requested a password reset for your u=
+ser account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/auth/reset/Mw/d7qwgi-55a8d1c676e1063d605b20252cb5e1b4/
+
+In case you=E2=80=99ve forgotten, you are: vitaliy
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
