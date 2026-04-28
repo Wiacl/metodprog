@@ -6,7 +6,6 @@
     <title>{% block title %}Система управления курсами{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Дополнительные стили для семантических тегов */
         body {
             display: flex;
             flex-direction: column;
@@ -21,7 +20,6 @@
             margin-top: auto;
         }
         
-        /* Стили для выпадающих меню */
         .dropdown-menu {
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -31,17 +29,27 @@
             background-color: #f8f9fa;
         }
         
-        /* Стили для информации о пользователе */
-        .user-info {
-            color: #fff;
-            padding: 8px 0;
-            margin-right: 10px;
+        /* Стили для аватара пользователя */
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            background-color: #6c757d;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 8px;
         }
         
         .user-greeting {
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 5px 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .auth-buttons .btn {
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -59,9 +67,9 @@
                 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
-                        <!-- Преподаватели с выпадающим меню -->
+                        <!-- Преподаватели -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="teachersDropdown" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                  Преподаватели
                             </a>
                             <ul class="dropdown-menu">
@@ -71,9 +79,9 @@
                             </ul>
                         </li>
                         
-                        <!-- Курсы с выпадающим меню -->
+                        <!-- Курсы -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                  Курсы
                             </a>
                             <ul class="dropdown-menu">
@@ -98,45 +106,52 @@
                         </li>
                     </ul>
                     
-                    <!-- Блок аутентификации -->
+                    <!-- ========== БЛОК АУТЕНТИФИКАЦИИ ========== -->
                     <ul class="navbar-nav">
                         {% if user.is_authenticated %}
-                            <!-- Приветствие пользователя -->
-                            <li class="nav-item">
-                                <span class="user-info">
-                                    <span class="user-greeting">
-                                         {{ user.get_full_name|default:user.username }}
+                            <!-- Пользователь авторизован -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle user-greeting" href="#" role="button" data-bs-toggle="dropdown">
+                                    <span class="user-avatar">
+                                        {{ user.first_name|slice:":1"|upper }}{{ user.last_name|slice:":1"|upper }}
                                     </span>
-                                </span>
-                            </li>
-                            <!-- Смена пароля -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'password_change' %}">
-                                     Сменить пароль
+                                    <span>{{ user.get_full_name|default:user.username }}</span>
                                 </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <span class="dropdown-item-text text-muted">
+                                            <small>Вы вошли как</small><br>
+                                            <strong>{{ user.username }}</strong>
+                                        </span>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="{% url 'password_change' %}">
+                                             Сменить пароль
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                                            {% csrf_token %}
+                                            <button type="submit" class="dropdown-item" style="width: 100%; text-align: left; background: none; border: none;">
+                                                 Выйти
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
                             </li>
-                            <!-- Выход -->
-                            <li class="nav-item">
-    <form action="{% url 'logout' %}" method="post" style="display: inline;">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-link nav-link" style="display: inline; padding: 0;">
-             Выйти
-        </button>
-    </form>
-</li>
                         {% else %}
-                            <!-- Вход -->
+                            <!-- Пользователь НЕ авторизован -->
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'login' %}">
                                      Войти
                                 </a>
                             </li>
-                            <!-- Регистрация -->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="{% url 'users:register' %}">
                                      Регистрация
                                 </a>
-                            </li>
+                            </li> -->
                         {% endif %}
                     </ul>
                 </div>
@@ -164,17 +179,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>📚 Course Manager</h5>
+                    <h5> Course Manager</h5>
                     <p>Система управления курсами</p>
                     <p class="text-white-50 small">Управление преподавателями, курсами и студентами</p>
                 </div>
                 <div class="col-md-4">
                     <h6>Быстрые ссылки</h6>
                     <ul class="list-unstyled">
-                        <li><a href="{% url 'schedule:teacher_list' %}" class="text-white-50 text-decoration-none">👨‍🏫 Преподаватели</a></li>
-                        <li><a href="{% url 'schedule:course_list' %}" class="text-white-50 text-decoration-none">📖 Курсы</a></li>
-                        <li><a href="{% url 'schedule:student_list' %}" class="text-white-50 text-decoration-none">👨‍🎓 Студенты</a></li>
-                        <li><a href="{% url 'schedule:orm_queries' %}" class="text-white-50 text-decoration-none">🔍 ORM Запросы</a></li>
+                        <li><a href="{% url 'schedule:teacher_list' %}" class="text-white-50 text-decoration-none"> Преподаватели</a></li>
+                        <li><a href="{% url 'schedule:course_list' %}" class="text-white-50 text-decoration-none"> Курсы</a></li>
+                        <li><a href="{% url 'schedule:student_list' %}" class="text-white-50 text-decoration-none"> Студенты</a></li>
+                        <li><a href="{% url 'schedule:orm_queries' %}" class="text-white-50 text-decoration-none"> ORM Запросы</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -188,7 +203,7 @@
             </div>
             <hr class="mt-3">
             <div class="text-center text-white-50 small">
-                <span>Разработано  для управления учебным процессом</span>
+                <span>Разработано для управления учебным процессом</span>
             </div>
         </div>
     </footer>
