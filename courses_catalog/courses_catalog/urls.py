@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('catalog.urls')),
-    path('schedule/', include('schedule.urls'))
+    path('schedule/', include('schedule.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
+    path('auth/logout/', LogoutView.as_view(next_page='/schedule/teachers/'), name='logout'),
+    path('register/', include('users.urls')),
 ]
 
 handler404 = 'catalog.views.custom_404'

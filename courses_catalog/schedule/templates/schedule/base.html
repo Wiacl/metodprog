@@ -30,6 +30,19 @@
         .dropdown-item:hover {
             background-color: #f8f9fa;
         }
+        
+        /* Стили для информации о пользователе */
+        .user-info {
+            color: #fff;
+            padding: 8px 0;
+            margin-right: 10px;
+        }
+        
+        .user-greeting {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 5px 12px;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +50,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'schedule:teacher_list' %}">
-                     Course Manager
+                    📚 Course Manager
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -45,11 +58,11 @@
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav me-auto">
                         <!-- Преподаватели с выпадающим меню -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="teachersDropdown" role="button" data-bs-toggle="dropdown">
-                                 Преподаватели
+                                👨‍🏫 Преподаватели
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{% url 'schedule:teacher_list' %}">📋 Список преподавателей</a></li>
@@ -61,7 +74,7 @@
                         <!-- Курсы с выпадающим меню -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
-                                 Курсы
+                                📖 Курсы
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{% url 'schedule:course_list' %}">📋 Список курсов</a></li>
@@ -73,16 +86,58 @@
                         <!-- Студенты -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'schedule:student_list' %}">
-                                 Студенты
+                                👨‍🎓 Студенты
                             </a>
                         </li>
                         
                         <!-- ORM Запросы -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'schedule:orm_queries' %}">
-                                 ORM Запросы
+                                🔍 ORM Запросы
                             </a>
                         </li>
+                    </ul>
+                    
+                    <!-- Блок аутентификации -->
+                    <ul class="navbar-nav">
+                        {% if user.is_authenticated %}
+                            <!-- Приветствие пользователя -->
+                            <li class="nav-item">
+                                <span class="user-info">
+                                    <span class="user-greeting">
+                                        👋 {{ user.get_full_name|default:user.username }}
+                                    </span>
+                                </span>
+                            </li>
+                            <!-- Смена пароля -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'password_change' %}">
+                                    🔑 Сменить пароль
+                                </a>
+                            </li>
+                            <!-- Выход -->
+                            <li class="nav-item">
+    <form action="{% url 'logout' %}" method="post" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-link nav-link" style="display: inline; padding: 0;">
+            🚪 Выйти
+        </button>
+    </form>
+</li>
+                        {% else %}
+                            <!-- Вход -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'login' %}">
+                                    🔐 Войти
+                                </a>
+                            </li>
+                            <!-- Регистрация -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'users:register' %}">
+                                    📝 Регистрация
+                                </a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -109,7 +164,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5> Course Manager</h5>
+                    <h5>📚 Course Manager</h5>
                     <p>Система управления курсами</p>
                     <p class="text-white-50 small">Управление преподавателями, курсами и студентами</p>
                 </div>
@@ -125,15 +180,15 @@
                 <div class="col-md-4">
                     <h6>Информация</h6>
                     <ul class="list-unstyled">
-                        <li><span class="text-white-50">Версия: 1.0</span></li>
-                        <li><span class="text-white-50">© 2026 Schedule</span></li>
-                        <li><span class="text-white-50"> Учебный проект Django</span></li>
+                        <li><span class="text-white-50">📅 Версия: 2.0</span></li>
+                        <li><span class="text-white-50">© 2026 Course Manager</span></li>
+                        <li><span class="text-white-50">🎓 Учебный проект Django</span></li>
                     </ul>
                 </div>
             </div>
             <hr class="mt-3">
             <div class="text-center text-white-50 small">
-                <span>Разработано  для управления учебным процессом</span>
+                <span>Разработано с ❤️ для управления учебным процессом</span>
             </div>
         </div>
     </footer>

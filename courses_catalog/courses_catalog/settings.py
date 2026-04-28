@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
-    'schedule'
+    'schedule',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -117,3 +118,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+AUTH_USER_MODEL = 'users.User'
+
+LOGIN_URL = '/auth/login/'
+LOGIN_REDIRECT_URL = '/schedule/teachers/'
+LOGOUT_REDIRECT_URL = '/schedule/teachers/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
