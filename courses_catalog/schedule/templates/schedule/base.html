@@ -109,50 +109,52 @@
                     <!-- ========== БЛОК АУТЕНТИФИКАЦИИ ========== -->
                     <ul class="navbar-nav">
                         {% if user.is_authenticated %}
-                            <!-- Пользователь авторизован -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle user-greeting" href="#" role="button" data-bs-toggle="dropdown">
-                                    <span class="user-avatar">
-                                        {{ user.first_name|slice:":1"|upper }}{{ user.last_name|slice:":1"|upper }}
-                                    </span>
-                                    <span>{{ user.get_full_name|default:user.username }}</span>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <div class="user-avatar">
+                                        {{ user.first_name|first }}{{ user.last_name|first }}
+                                    </div>
+                                    {{ user.get_full_name|default:user.username }}
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
-                                        <span class="dropdown-item-text text-muted">
-                                            <small>Вы вошли как</small><br>
-                                            <strong>{{ user.username }}</strong>
-                                        </span>
-                                    </li>
+                                    <li><a class="dropdown-item" href="{% url 'profile' %}">
+                                        👤 Мой профиль
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{% url 'profile_edit' %}">
+                                        ✏️ Редактировать профиль
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{% url 'friends_list' %}">
+                                        ❤️ Мои друзья
+                                    </a></li>
+                                    <li><a class="dropdown-item" href="{% url 'users_list' %}">
+                                        👥 Все пользователи
+                                    </a></li>
                                     <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="{% url 'password_change' %}">
+                                        🔑 Сменить пароль
+                                    </a></li>
                                     <li>
-                                        <a class="dropdown-item" href="{% url 'password_change' %}">
-                                             Сменить пароль
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                                        <form method="post" action="{% url 'logout' %}">
                                             {% csrf_token %}
-                                            <button type="submit" class="dropdown-item" style="width: 100%; text-align: left; background: none; border: none;">
-                                                 Выйти
+                                            <button type="submit" class="dropdown-item">
+                                                🚪 Выйти
                                             </button>
                                         </form>
                                     </li>
                                 </ul>
                             </li>
                         {% else %}
-                            <!-- Пользователь НЕ авторизован -->
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'login' %}">
-                                     Войти
+                                    Войти
                                 </a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="{% url 'users:register' %}">
-                                     Регистрация
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'register' %}">
+                                    Регистрация
                                 </a>
-                            </li> -->
-                        {% endif %}
+                            </li>
+                        {% endif %}                     
                     </ul>
                 </div>
             </div>

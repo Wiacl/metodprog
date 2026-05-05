@@ -1,72 +1,75 @@
-from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
     """
-    Кастомная модель пользователя
-    Расширяет стандартную модель Django
+    Кастомная модель пользователя с дополнительными полями
     """
-    
-    # Дополнительные поля
     middle_name = models.CharField(
         max_length=50,
         blank=True,
-        null=True,
-        verbose_name="Отчество"
+        verbose_name='Отчество'
     )
     
     phone = models.CharField(
         max_length=20,
         blank=True,
-        null=True,
-        verbose_name="Телефон"
+        verbose_name='Телефон',
+        help_text='В формате: +7 (999) 123-45-67'
     )
     
-    birth_date = models.DateField(
+    avatar = models.ImageField(
+        upload_to='avatars/',
         blank=True,
         null=True,
-        verbose_name="Дата рождения"
+        verbose_name='Фото профиля'
     )
     
-    # Роли пользователей
-    ROLE_CHOICES = [
-        ('student', 'Студент'),
-        ('teacher', 'Преподаватель'),
-        ('admin', 'Администратор'),
-    ]
-    
-    role = models.CharField(
-        max_length=20,
-        choices=ROLE_CHOICES,
-        default='student',
-        verbose_name="Роль"
-    )
-    
-    # Связь с моделью Teacher (если пользователь - преподаватель)
-    teacher_profile = models.OneToOneField(
-        'schedule.Teacher',
-        on_delete=models.SET_NULL,
-        null=True,
+    bio = models.TextField(
+        max_length=500,
         blank=True,
-        related_name='user_account',
-        verbose_name="Профиль преподавателя"
+        verbose_name='О себе'
     )
     
-    # Связь с моделью Student (если пользователь - студент)
-    student_profile = models.OneToOneField(
-        'schedule.Student',
-        on_delete=models.SET_NULL,
-        null=True,
+    friends = models.ManyToManyField(
+        'self',
         blank=True,
-        related_name='user_account',
-        verbose_name="Профиль студента"
+        verbose_name='Друзья'
     )
     
     class Meta:
-        verbose_name = "Пользователь"
-        verbose_name_plural = "Пользователи"
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
+        ordering = ['last_name', 'first_name']
     
     def __str__(self):
-        return self.get_full_name() or self.username
+        if self.first_name and self.last_name:
+            return f'{self.last_name} {self.first_name}'
+        return self.username
+    
+    def get_full_name(self):
+        """Возвращает полное имя пользователя"""
+        full_name = f'{self.last_name} {self.first_name}'
+        if self.middle_name:
+            full_name += f' {self.middle_name}'
+        return full_name
+    
+    def get_friends(self):
+        """Возвращает список друзей"""
+        return self.friends.all()
+    
+    def add_friend(self, user):
+        """Добавляет пользователя в друзья"""
+        if user != self:
+            self.friends.add(user)
+            user.friends.add(self)
+    
+    def remove_friend(self, user):
+        """Удаляет пользователя из друзей"""
+        self.friends.remove(user)
+        user.friends.remove(self)
+    
+    def is_friend(self, user):
+        """Проверяет, является ли пользователь другом"""
+        return self.friends.filter(id=user.id).exists()

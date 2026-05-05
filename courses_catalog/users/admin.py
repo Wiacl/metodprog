@@ -5,15 +5,18 @@ from .models import User
 
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
-    list_display = ('username', 'email', 'first_name', 'last_name', 'role', 'is_staff')
-    list_filter = ('role', 'is_staff', 'is_active')
+    list_display = ('username', 'email', 'first_name', 'last_name', 'middle_name', 'phone', 'is_staff')
+    list_filter = ('is_staff', 'is_superuser', 'is_active')
+    search_fields = ('username', 'first_name', 'last_name', 'email', 'phone')
+    
     fieldsets = UserAdmin.fieldsets + (
         ('Дополнительная информация', {
-            'fields': ('middle_name', 'phone', 'birth_date', 'role'),
+            'fields': ('middle_name', 'phone', 'avatar', 'bio', 'friends')
         }),
     )
+    
     add_fieldsets = UserAdmin.add_fieldsets + (
         ('Дополнительная информация', {
-            'fields': ('middle_name', 'phone', 'birth_date', 'role'),
+            'fields': ('middle_name', 'phone', 'email')
         }),
     )

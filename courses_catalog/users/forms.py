@@ -104,3 +104,38 @@ class UserRegistrationForm(UserCreationForm):
         if commit:
             user.save()
         return user
+
+
+class UserProfileForm(forms.ModelForm):
+    """
+    Форма для редактирования профиля пользователя
+    """
+    
+    class Meta:
+        model = User
+        fields = [
+            'first_name', 'last_name', 'middle_name',
+            'email', 'phone', 'avatar', 'bio'
+        ]
+        widgets = {
+            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'middle_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'phone': forms.TextInput(attrs={'class': 'form-control'}),
+            'avatar': forms.FileInput(attrs={'class': 'form-control'}),
+            'bio': forms.Textarea(attrs={
+                'class': 'form-control',
+                'rows': 4,
+                'placeholder': 'Расскажите о себе...'
+            }),
+        }
+    
+    def clean_phone(self):
+        """Валидация телефона"""
+        phone = self.cleaned_data.get('phone')
+        if phone:
+            pattern = r'^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$'
+            if not re.match(pattern, phone):
+                raise ValidationError('Телефон должен быть в формате: +7 (999) 123-45-67')
+        return phone

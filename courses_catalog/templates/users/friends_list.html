@@ -1,0 +1,54 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Мои друзья{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Мои друзья</h1>
+    
+    <div class="row">
+        {% for friend in friends %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            {% if friend.avatar %}
+                                <img src="{{ friend.avatar.url }}" class="rounded-circle" alt="Аватар" style="width: 80px; height: 80px; object-fit: cover;">
+                            {% else %}
+                                <div class="user-avatar mx-auto" style="width: 80px; height: 80px; font-size: 24px;">
+                                    {{ friend.first_name|first }}{{ friend.last_name|first }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <h5 class="card-title text-center">
+                            <a href="{% url 'user_detail' friend.id %}" class="text-decoration-none">
+                                {{ friend.get_full_name }}
+                            </a>
+                        </h5>
+                        <p class="card-text text-center">
+                            <small class="text-muted">{{ friend.email }}</small>
+                        </p>
+                        <div class="text-center">
+                            <a href="{% url 'user_detail' friend.id %}" class="btn btn-info btn-sm mb-2">
+                                Профиль
+                            </a>
+                            <form method="post" action="{% url 'remove_friend' friend.id %}" class="d-inline">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    Удалить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info">
+                    У вас пока нет друзей. <a href="{% url 'users_list' %}">Найти друзей</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

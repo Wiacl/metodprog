@@ -1,0 +1,48 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Пользователи{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Все пользователи</h1>
+    
+    <div class="row">
+        {% for user_item in users %}
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            {% if user_item.avatar %}
+                                <img src="{{ user_item.avatar.url }}" class="rounded-circle" alt="Аватар" style="width: 80px; height: 80px; object-fit: cover;">
+                            {% else %}
+                                <div class="user-avatar mx-auto" style="width: 80px; height: 80px; font-size: 24px;">
+                                    {{ user_item.first_name|first }}{{ user_item.last_name|first }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        <h5 class="card-title text-center">
+                            <a href="{% url 'user_detail' user_item.id %}" class="text-decoration-none">
+                                {{ user_item.get_full_name }}
+                            </a>
+                        </h5>
+                        <p class="card-text text-center">
+                            <small class="text-muted">@{{ user_item.username }}</small>
+                        </p>
+                        <div class="text-center">
+                            <a href="{% url 'user_detail' user_item.id %}" class="btn btn-info btn-sm">
+                                Посмотреть профиль
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info">
+                    Нет других пользователей
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
