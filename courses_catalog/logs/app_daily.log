@@ -1,0 +1,304 @@
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 19:57:53 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 19:58:43 | INFO     | django.utils.autoreload | autoreload.py:265  | trigger_reload       | /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/users/views.py changed, reloading.
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 19:58:43 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:01:26 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 20:02:12 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing AvifImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BlpImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BmpImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BufrStubImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing CurImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DcxImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DdsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing EpsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FitsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FliImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FpxImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FtexImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GbrImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GifImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GribStubImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Hdf5StubImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcnsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcoImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImtImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IptcImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing JpegImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Jpeg2KImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing McIdasImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MicImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpegImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpoImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MspImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PalmImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcdImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcxImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PdfImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PixarImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PngImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PpmImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PsdImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing QoiImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SgiImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SpiderImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SunImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TgaImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TiffImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WebPImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WmfImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XbmImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XpmImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XVThumbImagePlugin
+2026-05-10 20:02:14 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
+2026-05-10 20:02:14 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/Unknown.jpg
+2026-05-10 20:02:25 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
+2026-05-10 20:02:25 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:02:30 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:03:24 | INFO     | django.utils.autoreload | autoreload.py:265  | trigger_reload       | /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/courses_catalog/urls.py changed, reloading.
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:03:24 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:03:41 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 20:03:50 | INFO     | users.auth_views     | auth_views.py:39   | dispatch             | User 'wiacl' logged out
+2026-05-10 20:03:58 | INFO     | users.auth_views     | auth_views.py:19   | form_valid           | User 'wiacl' successfully logged in
+2026-05-10 20:03:58 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:04:52 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:05:25 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:18:59 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 20:19:08 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing AvifImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BlpImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BmpImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BufrStubImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing CurImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DcxImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DdsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing EpsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FitsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FliImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FpxImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FtexImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GbrImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GifImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GribStubImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Hdf5StubImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcnsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcoImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImtImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IptcImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing JpegImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Jpeg2KImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing McIdasImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MicImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpegImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpoImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MspImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PalmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcdImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcxImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PdfImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PixarImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PngImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PpmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PsdImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing QoiImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SgiImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SpiderImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SunImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TgaImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TiffImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WebPImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WmfImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XbmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XpmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XVThumbImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
+2026-05-10 20:19:18 | INFO     | users.forms          | forms.py:187  | clean_avatar         | Avatar validated for user 'wiacl': format=PNG, size=(757, 652)
+2026-05-10 20:19:18 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
+2026-05-10 20:19:18 | INFO     | users.models         | models.py:91   | save                 | Avatar resized for user 'wiacl' to (300, 258)
+2026-05-10 20:19:18 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 20:19:20 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 20:28:44 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:55:28 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader

@@ -1,0 +1,10 @@
+2026-05-10 20:02:14 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/Unknown.jpg
+2026-05-10 20:02:25 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:02:30 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:03:58 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:04:52 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:05:25 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:19:08 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:19:18 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 20:19:20 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 20:28:44 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png

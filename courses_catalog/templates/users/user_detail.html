@@ -18,30 +18,32 @@
             <div class="row">
                 <div class="col-md-3 text-center">
                     {% if profile_user.avatar %}
-                        <img src="{{ profile_user.avatar.url }}" class="img-fluid rounded-circle mb-3" alt="Аватар" style="width: 150px; height: 150px; object-fit: cover;">
+                        <img src="{{ profile_user.avatar.url }}" 
+                            class="rounded-circle" 
+                            alt="Аватар" 
+                            style="width: 150px; height: 150px; object-fit: cover;">
                     {% else %}
-                        <div class="user-avatar mx-auto mb-3" style="width: 150px; height: 150px; font-size: 48px;">
+                        <div class="user-avatar mx-auto mb-3" 
+                            style="width: 150px; height: 150px; font-size: 48px;">
                             {{ profile_user.first_name|first }}{{ profile_user.last_name|first }}
                         </div>
-                    {% endif %}
+                    {% endif %}                 
                 </div>
                 <div class="col-md-9">
                     <h2>{{ profile_user.get_full_name }}</h2>
                     <p><strong>Имя пользователя:</strong> {{ profile_user.username }}</p>
+                    <p><strong>Email:</strong> {{ profile_user.email }}</p>
+                    {% if profile_user.phone %}
+                        <p><strong>Телефон:</strong> {{ profile_user.phone }}</p>
+                    {% endif %}
+                    {% if profile_user.bio %}
+                        <p><strong>О себе:</strong> {{ profile_user.bio }}</p>
+                    {% endif %}
+                    <p><strong>Дата регистрации:</strong> {{ profile_user.date_joined|date:"d.m.Y" }}</p>
                     
-                    {% if can_view_full_profile %}
-                        <!-- Полная информация видна только для друзей и своего профиля -->
-                        <p><strong>Email:</strong> {{ profile_user.email }}</p>
-                        {% if profile_user.phone %}
-                            <p><strong>Телефон:</strong> {{ profile_user.phone }}</p>
-                        {% endif %}
-                        {% if profile_user.bio %}
-                            <p><strong>О себе:</strong> {{ profile_user.bio }}</p>
-                        {% endif %}
-                        <p><strong>Дата регистрации:</strong> {{ profile_user.date_joined|date:"d.m.Y" }}</p>
-                        
-                        {% if profile_user != request.user %}
-                            <div class="mt-3">
+                    {% if not is_own_profile %}
+                        <div class="mt-3">
+                            {% if is_friend %}
                                 <span class="badge bg-success me-2 mb-2">В друзьях</span>
                                 <form method="post" action="{% url 'remove_friend' profile_user.id %}" class="d-inline">
                                     {% csrf_token %}
@@ -49,22 +51,15 @@
                                         Удалить из друзей
                                     </button>
                                 </form>
-                            </div>
-                        {% endif %}
-                    {% else %}
-                        <!-- Ограниченная информация для не-друзей -->
-                        <div class="alert alert-info mb-3">
-                            Чтобы увидеть полную информацию, добавьте пользователя в друзья.
+                            {% else %}
+                                <form method="post" action="{% url 'add_friend' profile_user.id %}" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-primary">
+                                        Добавить в друзья
+                                    </button>
+                                </form>
+                            {% endif %}
                         </div>
-                        
-                        {% if profile_user != request.user %}
-                            <form method="post" action="{% url 'add_friend' profile_user.id %}" class="d-inline">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-primary">
-                                    Добавить в друзья
-                                </button>
-                            </form>
-                        {% endif %}
                     {% endif %}
                 </div>
             </div>
@@ -73,7 +68,7 @@
     
     <div class="mt-3">
         <a href="{% url 'users_list' %}" class="btn btn-secondary">Назад к списку пользователей</a>
-        {% if can_view_full_profile and profile_user != request.user %}
+        {% if is_friend or is_own_profile %}
             <a href="{% url 'friends_list' %}" class="btn btn-info">Мои друзья</a>
         {% endif %}
     </div>

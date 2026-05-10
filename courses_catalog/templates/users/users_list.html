@@ -1,10 +1,20 @@
 {% extends 'schedule/base.html' %}
+{% load user_filters %}
 
 {% block title %}Пользователи{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
     <h1>Все пользователи</h1>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
     
     <div class="row">
         {% for user_item in users %}
@@ -13,25 +23,38 @@
                     <div class="card-body">
                         <div class="text-center mb-3">
                             {% if user_item.avatar %}
-                                <img src="{{ user_item.avatar.url }}" class="rounded-circle" alt="Аватар" style="width: 80px; height: 80px; object-fit: cover;">
+                                <img src="{{ user_item.avatar.url }}" 
+                                    class="rounded-circle" 
+                                    alt="Аватар" 
+                                    style="width: 80px; height: 80px; object-fit: cover;">
                             {% else %}
-                                <div class="user-avatar mx-auto" style="width: 80px; height: 80px; font-size: 24px;">
+                                <div class="user-avatar mx-auto" 
+                                    style="width: 80px; height: 80px; font-size: 24px;">
                                     {{ user_item.first_name|first }}{{ user_item.last_name|first }}
                                 </div>
                             {% endif %}
                         </div>
                         <h5 class="card-title text-center">
-                            <a href="{% url 'user_detail' user_item.id %}" class="text-decoration-none">
-                                {{ user_item.get_full_name }}
-                            </a>
+                            {{ user_item.get_full_name }}
                         </h5>
                         <p class="card-text text-center">
                             <small class="text-muted">@{{ user_item.username }}</small>
                         </p>
                         <div class="text-center">
-                            <a href="{% url 'user_detail' user_item.id %}" class="btn btn-info btn-sm">
-                                Посмотреть профиль
-                            </a>
+                            {% if friends_dict|get_item:user_item.id %}
+                                <!-- Уже друзья - показываем ссылку на профиль -->
+                                <a href="{% url 'user_detail' user_item.id %}" class="btn btn-success btn-sm mb-2">
+                                    В друзьях
+                                </a>
+                            {% else %}
+                                <!-- Не друзья - показываем кнопку добавления -->
+                                <form method="post" action="{% url 'add_friend' user_item.id %}" class="d-inline">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        Добавить в друзья
+                                    </button>
+                                </form>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

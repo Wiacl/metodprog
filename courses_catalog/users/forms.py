@@ -1,14 +1,16 @@
+import logging
+import re
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
+from PIL import Image
 from .models import User
-import re
+
+logger = logging.getLogger(__name__)
 
 
 class UserRegistrationForm(UserCreationForm):
-    """
-    Форма для регистрации нового пользователя
-    """
+    """Форма для регистрации нового пользователя"""
     
     email = forms.EmailField(
         required=True,
@@ -63,7 +65,6 @@ class UserRegistrationForm(UserCreationForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Добавляем CSS классы
         self.fields['username'].widget.attrs.update({
             'class': 'form-control',
             'placeholder': 'Придумайте имя пользователя'
@@ -78,18 +79,34 @@ class UserRegistrationForm(UserCreationForm):
         })
     
     def clean_phone(self):
-        """Валидация телефона"""
-        phone = self.cleaned_data.get('phone')
-        if phone:
-            pattern = r'^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$'
-            if not re.match(pattern, phone):
-                raise ValidationError('Телефон должен быть в формате: +7 (999) 123-45-67')
-        return phone
+        """Автоматически форматирует телефон"""
+        phone = self.cleaned_data.get('phone', '').strip()
+        
+        if not phone:
+            return phone
+        
+        digits = re.sub(r'\D', '', phone)
+        
+        if not digits:
+            return phone
+        
+        try:
+            if len(digits) >= 10:
+                digits = digits[-10:]
+                formatted = f'+7 ({digits[0:3]}) {digits[3:6]}-{digits[6:8]}-{digits[8:10]}'
+            else:
+                raise ValidationError('Номер телефона слишком короткий.')
+            
+            return formatted
+            
+        except (IndexError, ValueError):
+            raise ValidationError('Ошибка при форматировании номера.')
     
     def clean_email(self):
         """Проверка уникальности email"""
         email = self.cleaned_data.get('email')
         if User.objects.filter(email=email).exists():
+            logger.warning(f"Registration attempt with existing email: {email}")
             raise ValidationError('Пользователь с таким email уже существует')
         return email
     
@@ -103,13 +120,12 @@ class UserRegistrationForm(UserCreationForm):
         
         if commit:
             user.save()
+            logger.info(f"New user created: {user.username}")
         return user
 
 
 class UserProfileForm(forms.ModelForm):
-    """
-    Форма для редактирования профиля пользователя
-    """
+    """Форма для редактирования профиля пользователя"""
     
     class Meta:
         model = User
@@ -131,11 +147,81 @@ class UserProfileForm(forms.ModelForm):
             }),
         }
     
+    def clean_avatar(self):
+        """
+        Проверка и обработка загружаемого аватара.
+        Логирование ошибок с exc_info=True.
+        """
+        avatar = self.cleaned_data.get('avatar')
+        
+        if not avatar:
+            return avatar
+        
+        # Проверка размера файла
+        if avatar.size > 5 * 1024 * 1024:
+            logger.warning(
+                f"Avatar upload failed: file too large ({avatar.size} bytes) "
+                f"for user '{self.instance.username}'"
+            )
+            raise ValidationError('Размер файла не должен превышать 5 МБ')
+        
+        # Проверка content_type
+        allowed_content_types = ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
+        if hasattr(avatar, 'content_type') and avatar.content_type not in allowed_content_types:
+            logger.warning(
+                f"Avatar upload failed: invalid content type '{avatar.content_type}' "
+                f"for user '{self.instance.username}'"
+            )
+            raise ValidationError(
+                f'Неподдерживаемый тип файла. Разрешены: JPEG, PNG, GIF, WebP'
+            )
+        
+        # Проверка, что файл действительно изображение
+        try:
+            img = Image.open(avatar)
+            img.verify()
+            
+            # Переоткрываем после verify()
+            img = Image.open(avatar)
+            
+            logger.info(
+                f"Avatar validated for user '{self.instance.username}': "
+                f"format={img.format}, size={img.size}"
+            )
+            
+        except ValidationError:
+            raise
+        except Exception as e:
+            logger.error(
+                f"Error validating avatar for user '{self.instance.username}': {str(e)}",
+                exc_info=True
+            )
+            raise ValidationError(
+                'Ошибка при обработке изображения. Убедитесь, что файл не поврежден.'
+            )
+        
+        return avatar
+    
     def clean_phone(self):
-        """Валидация телефона"""
-        phone = self.cleaned_data.get('phone')
-        if phone:
-            pattern = r'^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$'
-            if not re.match(pattern, phone):
-                raise ValidationError('Телефон должен быть в формате: +7 (999) 123-45-67')
-        return phone
+        """Форматирование телефона"""
+        phone = self.cleaned_data.get('phone', '').strip()
+        
+        if not phone:
+            return phone
+        
+        digits = re.sub(r'\D', '', phone)
+        
+        if not digits:
+            return phone
+        
+        try:
+            if len(digits) >= 10:
+                digits = digits[-10:]
+                formatted = f'+7 ({digits[0:3]}) {digits[3:6]}-{digits[6:8]}-{digits[8:10]}'
+            else:
+                raise ValidationError('Номер телефона слишком короткий.')
+            
+            return formatted
+            
+        except (IndexError, ValueError):
+            raise ValidationError('Ошибка при форматировании номера.')

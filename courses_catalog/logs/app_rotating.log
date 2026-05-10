@@ -1,0 +1,170 @@
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 22:57:53 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 19:57:53 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 19:57:53 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 19:58:43 | INFO     | django.utils.autoreload | autoreload.py:265  | trigger_reload       | /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/users/views.py changed, reloading.
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 19:58:43 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 19:58:43 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:01:25 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:01:26 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 20:02:14 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
+2026-05-10 20:02:14 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/Unknown.jpg
+2026-05-10 20:02:25 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
+2026-05-10 20:02:25 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:02:30 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:03:24 | INFO     | django.utils.autoreload | autoreload.py:265  | trigger_reload       | /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/courses_catalog/urls.py changed, reloading.
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:03:24 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:03:24 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:03:40 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:03:41 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:03:41 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 20:03:50 | INFO     | users.auth_views     | auth_views.py:39   | dispatch             | User 'wiacl' logged out
+2026-05-10 20:03:58 | INFO     | users.auth_views     | auth_views.py:19   | form_valid           | User 'wiacl' successfully logged in
+2026-05-10 20:03:58 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:04:52 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:05:25 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:12:48 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:18:59 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 20:19:08 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:19:18 | INFO     | users.forms          | forms.py:187  | clean_avatar         | Avatar validated for user 'wiacl': format=PNG, size=(757, 652)
+2026-05-10 20:19:18 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
+2026-05-10 20:19:18 | INFO     | users.models         | models.py:91   | save                 | Avatar resized for user 'wiacl' to (300, 258)
+2026-05-10 20:19:18 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 20:19:20 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 20:28:44 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 23:55:27 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
+2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
+2026-05-10 20:55:28 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader

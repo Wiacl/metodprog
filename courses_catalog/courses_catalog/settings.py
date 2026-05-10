@@ -4,6 +4,9 @@ Django settings for courses_catalog project.
 
 from pathlib import Path
 
+from .logging_config import setup_logging
+setup_logging()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-271@g+cj4wsm_(m0#89j_%ubi35ug7sp*riu*#(i^f7=1d*kyj'
@@ -94,6 +97,10 @@ DEFAULT_FROM_EMAIL = 'webmaster@localhost'
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/profile/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+# LOGIN_REQUIRED_URLS = [
+#     '/',
+# ]
 
 # Медиа файлы (для аватаров)
 MEDIA_URL = '/media/'

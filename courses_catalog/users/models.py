@@ -1,5 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from PIL import Image
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class User(AbstractUser):
@@ -49,27 +53,51 @@ class User(AbstractUser):
         return self.username
     
     def get_full_name(self):
-        """Возвращает полное имя пользователя"""
         full_name = f'{self.last_name} {self.first_name}'
         if self.middle_name:
             full_name += f' {self.middle_name}'
         return full_name
     
     def get_friends(self):
-        """Возвращает список друзей"""
         return self.friends.all()
     
     def add_friend(self, user):
-        """Добавляет пользователя в друзья"""
         if user != self:
             self.friends.add(user)
             user.friends.add(self)
     
     def remove_friend(self, user):
-        """Удаляет пользователя из друзей"""
         self.friends.remove(user)
         user.friends.remove(self)
     
     def is_friend(self, user):
-        """Проверяет, является ли пользователь другом"""
         return self.friends.filter(id=user.id).exists()
+    
+    def save(self, *args, **kwargs):
+        """Переопределяем save для автоматического изменения размера аватара"""
+        super().save(*args, **kwargs)
+        
+        if self.avatar:
+            try:
+                img = Image.open(self.avatar.path)
+                
+                # Максимальный размер аватара
+                max_size = (300, 300)
+                
+                # Если изображение больше максимального размера - уменьшаем
+                if img.height > max_size[1] or img.width > max_size[0]:
+                    img.thumbnail(max_size, Image.Resampling.LANCZOS)
+                    img.save(self.avatar.path, quality=85, optimize=True)
+                    logger.info(
+                        f"Avatar resized for user '{self.username}' "
+                        f"to {img.size}"
+                    )
+                    
+            except Exception as e:
+                # Логируем ошибку с полным traceback
+                logger.error(
+                    f"Error processing avatar for user '{self.username}': {str(e)}",
+                    exc_info=True
+                )
+                # Не глушим ошибку - пробрасываем дальше
+                raise

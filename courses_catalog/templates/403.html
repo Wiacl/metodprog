@@ -1,0 +1,30 @@
+{% extends 'schedule/base.html' %}
+
+{% block title %}Доступ запрещен{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="display-1 text-muted">403</h1>
+                    <h3 class="mb-4">Доступ запрещен</h3>
+                    <p class="text-muted mb-4">
+                        Вы не можете просматривать профиль этого пользователя.
+                        Добавьте его в друзья, чтобы увидеть страницу.
+                    </p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="{% url 'users_list' %}" class="btn btn-primary">
+                            К списку пользователей
+                        </a>
+                        <a href="{% url 'profile' %}" class="btn btn-secondary">
+                            Мой профиль
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
