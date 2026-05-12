@@ -47,6 +47,55 @@
 2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
 2026-05-10 20:01:26 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
 2026-05-10 20:01:26 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
+2026-05-10 20:02:12 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing AvifImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BlpImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BmpImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BufrStubImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing CurImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DcxImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DdsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing EpsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FitsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FliImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FpxImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FtexImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GbrImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GifImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GribStubImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Hdf5StubImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcnsImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcoImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImtImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IptcImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing JpegImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Jpeg2KImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing McIdasImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MicImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpegImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpoImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MspImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PalmImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcdImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcxImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PdfImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PixarImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PngImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PpmImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PsdImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing QoiImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SgiImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SpiderImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SunImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TgaImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TiffImagePlugin
+2026-05-10 20:02:13 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WebPImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WmfImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XbmImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XpmImagePlugin
+2026-05-10 20:02:14 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XVThumbImagePlugin
 2026-05-10 20:02:14 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
 2026-05-10 20:02:14 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/Unknown.jpg
 2026-05-10 20:02:25 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
@@ -143,8 +192,93 @@
 2026-05-10 20:18:58 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
 2026-05-10 20:18:59 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
 2026-05-10 20:19:08 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/c4b4d796d72253ce57966e3cb926f67b.jpg
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing AvifImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BlpImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BmpImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing BufrStubImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing CurImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DcxImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing DdsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing EpsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FitsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FliImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FpxImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing FtexImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GbrImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GifImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing GribStubImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Hdf5StubImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcnsImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IcoImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing ImtImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing IptcImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing JpegImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing Jpeg2KImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing McIdasImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MicImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:391  | init                 | Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpegImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MpoImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing MspImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PalmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcdImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PcxImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PdfImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PixarImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PngImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PpmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing PsdImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing QoiImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SgiImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SpiderImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing SunImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TgaImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing TiffImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WebPImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing WmfImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XbmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XpmImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.Image            | Image.py:388  | init                 | Importing XVThumbImagePlugin
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
 2026-05-10 20:19:18 | INFO     | users.forms          | forms.py:187  | clean_avatar         | Avatar validated for user 'wiacl': format=PNG, size=(757, 652)
 2026-05-10 20:19:18 | INFO     | users.views          | views.py:100  | form_valid           | User 'wiacl' updated their profile
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IHDR' 16 13
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'cHRM' 41 32
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'bKGD' 85 6
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:787  | _open                | b'bKGD' 85 6 (unknown)
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'pHYs' 103 9
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 124 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 173 37
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'tEXt' 222 40
+2026-05-10 20:19:18 | DEBUG    | PIL.PngImagePlugin   | PngImagePlugin.py:204  | call                 | STREAM b'IDAT' 274 32768
 2026-05-10 20:19:18 | INFO     | users.models         | models.py:91   | save                 | Avatar resized for user 'wiacl' to (300, 258)
 2026-05-10 20:19:18 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
 2026-05-10 20:19:20 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
@@ -168,112 +302,3 @@
 2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
 2026-05-10 20:55:27 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
 2026-05-10 20:55:28 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
-2026-05-12 14:23:45 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
-2026-05-12 14:23:46 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
-2026-05-12 11:23:46 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
-2026-05-12 11:23:46 | INFO     | django.utils.autoreload | autoreload.py:681  | run_with_reloader    | Watching for file changes with StatReloader
-2026-05-12 11:25:24 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /apple-touch-icon-precomposed.png
-2026-05-12 11:25:24 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /apple-touch-icon.png
-2026-05-12 11:25:24 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /favicon.ico
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:105  | setup_logging        | ============================================================
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:106  | setup_logging        | Logging system initialized
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:107  | setup_logging        | Log directory: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:108  | setup_logging        | Console handler: Enabled
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:109  | setup_logging        | Rotating file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_rotating.log
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:110  | setup_logging        | Timed file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/app_daily.log
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:111  | setup_logging        | Error file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/errors.log
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:112  | setup_logging        | Warning file handler: /Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/logs/warnings.log
-2026-05-12 14:25:43 | INFO     | root                 | logging_config.py:113  | setup_logging        | ============================================================
-2026-05-12 11:25:44 | INFO     | users.views          | views.py:150  | add_friend           | User 'djangotest' added 'friend' as friend
-2026-05-12 11:25:44 | INFO     | users.views          | views.py:71   | dispatch             | User 'djangotest' viewed friend 'friend' profile
-2026-05-12 11:25:44 | INFO     | users.auth_views     | auth_views.py:19   | form_valid           | User 'djangotest' successfully logged in
-2026-05-12 11:25:45 | INFO     | users.auth_views     | auth_views.py:39   | dispatch             | User 'djangotest' logged out
-2026-05-12 11:25:45 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"username": [{"message": "This field is required.", "code": "required"}], "email": [{"message": "Enter a valid email address.", "code": "invalid"}], "first_name": [{"message": "This field is required.", "code": "required"}], "last_name": [{"message": "This field is required.", "code": "required"}], "password2": [{"message": "The two password fields didn\u2019t match.", "code": "password_mismatch"}]}
-2026-05-12 11:25:45 | INFO     | users.forms          | forms.py:123  | save                 | New user created: newdjango
-2026-05-12 11:25:45 | INFO     | users.views          | views.py:40   | form_valid           | User 'newdjango' (email: newdjango@example.com) successfully registered
-2026-05-12 11:25:46 | WARNING  | users.views          | views.py:75   | dispatch             | User 'djangotest' attempted to view restricted profile of 'stranger'
-2026-05-12 11:25:46 | WARNING  | users.views          | views.py:183  | custom_403           | 403 Forbidden for user 'Test Django' accessing /users/2/
-2026-05-12 11:25:46 | WARNING  | django.request       | log.py:249  | log_message          | Forbidden (Permission denied): /users/2/
-Traceback (most recent call last):
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/views/generic/base.py", line 106, in view
-    return self.dispatch(request, *args, **kwargs)
-           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/users/views.py", line 78, in dispatch
-    raise PermissionDenied('Вы не можете просматривать профиль этого пользователя.')
-django.core.exceptions.PermissionDenied: Вы не можете просматривать профиль этого пользователя.
-2026-05-12 11:25:46 | INFO     | users.forms          | forms.py:123  | save                 | New user created: newuser
-2026-05-12 11:25:46 | WARNING  | users.forms          | forms.py:109  | clean_email          | Registration attempt with existing email: newuser@example.com
-2026-05-12 11:25:46 | INFO     | users.forms          | forms.py:123  | save                 | New user created: testuser
-2026-05-12 11:25:46 | INFO     | users.forms          | forms.py:123  | save                 | New user created: testuser_5-67
-2026-05-12 11:25:47 | INFO     | users.forms          | forms.py:123  | save                 | New user created: testuser_4567
-2026-05-12 11:25:47 | INFO     | users.forms          | forms.py:123  | save                 | New user created: testuser_4567
-2026-05-12 11:25:47 | INFO     | users.forms          | forms.py:123  | save                 | New user created: testuser_4567
-2026-05-12 11:25:48 | INFO     | users.forms          | forms.py:123  | save                 | New user created: newuser
-2026-05-12 11:25:48 | INFO     | users.views          | views.py:40   | form_valid           | User 'newuser' (email: newuser@example.com) successfully registered
-2026-05-12 11:25:48 | INFO     | users.forms          | forms.py:123  | save                 | New user created: newuser2
-2026-05-12 11:25:48 | INFO     | users.views          | views.py:40   | form_valid           | User 'newuser2' (email: newuser2@example.com) successfully registered
-2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"username": [{"message": "This field is required.", "code": "required"}]}
-2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"email": [{"message": "This field is required.", "code": "required"}]}
-2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"first_name": [{"message": "This field is required.", "code": "required"}]}
-2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"last_name": [{"message": "This field is required.", "code": "required"}]}
-2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"password1": [{"message": "This field is required.", "code": "required"}]}
-2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"password2": [{"message": "This field is required.", "code": "required"}]}
-2026-05-12 11:25:48 | INFO     | users.auth_views     | auth_views.py:19   | form_valid           | User 'testuser' successfully logged in
-2026-05-12 11:25:49 | WARNING  | users.auth_views     | auth_views.py:26   | form_invalid         | Failed login attempt for user 'testuser'
-2026-05-12 11:25:49 | INFO     | users.auth_views     | auth_views.py:39   | dispatch             | User 'testuser' logged out
-2026-05-12 11:25:50 | INFO     | users.views          | views.py:100  | form_valid           | User 'testuser' updated their profile
-2026-05-12 11:25:51 | INFO     | users.views          | views.py:71   | dispatch             | User 'testuser' viewed friend 'testuser2' profile
-2026-05-12 11:25:51 | WARNING  | users.views          | views.py:75   | dispatch             | User 'testuser' attempted to view restricted profile of 'testuser2'
-2026-05-12 11:25:51 | WARNING  | users.views          | views.py:183  | custom_403           | 403 Forbidden for user 'Петров Иван' accessing /users/2/
-2026-05-12 11:25:51 | WARNING  | django.request       | log.py:249  | log_message          | Forbidden (Permission denied): /users/2/
-Traceback (most recent call last):
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/views/generic/base.py", line 106, in view
-    return self.dispatch(request, *args, **kwargs)
-           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/users/views.py", line 78, in dispatch
-    raise PermissionDenied('Вы не можете просматривать профиль этого пользователя.')
-django.core.exceptions.PermissionDenied: Вы не можете просматривать профиль этого пользователя.
-2026-05-12 11:25:51 | INFO     | users.views          | views.py:150  | add_friend           | User 'testuser' added 'testuser2' as friend
-2026-05-12 11:25:52 | INFO     | users.views          | views.py:165  | remove_friend        | User 'testuser' removed 'testuser2' from friends
-2026-05-12 11:25:52 | WARNING  | users.views          | views.py:140  | add_friend           | User 'testuser' tried to add themselves as friend

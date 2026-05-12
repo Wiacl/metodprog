@@ -8,3 +8,44 @@
 2026-05-10 20:19:18 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
 2026-05-10 20:19:20 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
 2026-05-10 20:28:44 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /media/avatars/eb91472e5d5f8c8be2a63ca59fa07d25.png
+2026-05-12 11:25:24 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /apple-touch-icon-precomposed.png
+2026-05-12 11:25:24 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /apple-touch-icon.png
+2026-05-12 11:25:24 | WARNING  | django.request       | log.py:249  | log_message          | Not Found: /favicon.ico
+2026-05-12 11:25:45 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"username": [{"message": "This field is required.", "code": "required"}], "email": [{"message": "Enter a valid email address.", "code": "invalid"}], "first_name": [{"message": "This field is required.", "code": "required"}], "last_name": [{"message": "This field is required.", "code": "required"}], "password2": [{"message": "The two password fields didn\u2019t match.", "code": "password_mismatch"}]}
+2026-05-12 11:25:46 | WARNING  | users.views          | views.py:75   | dispatch             | User 'djangotest' attempted to view restricted profile of 'stranger'
+2026-05-12 11:25:46 | WARNING  | users.views          | views.py:183  | custom_403           | 403 Forbidden for user 'Test Django' accessing /users/2/
+2026-05-12 11:25:46 | WARNING  | django.request       | log.py:249  | log_message          | Forbidden (Permission denied): /users/2/
+Traceback (most recent call last):
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/users/views.py", line 78, in dispatch
+    raise PermissionDenied('Вы не можете просматривать профиль этого пользователя.')
+django.core.exceptions.PermissionDenied: Вы не можете просматривать профиль этого пользователя.
+2026-05-12 11:25:46 | WARNING  | users.forms          | forms.py:109  | clean_email          | Registration attempt with existing email: newuser@example.com
+2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"username": [{"message": "This field is required.", "code": "required"}]}
+2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"email": [{"message": "This field is required.", "code": "required"}]}
+2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"first_name": [{"message": "This field is required.", "code": "required"}]}
+2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"last_name": [{"message": "This field is required.", "code": "required"}]}
+2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"password1": [{"message": "This field is required.", "code": "required"}]}
+2026-05-12 11:25:48 | WARNING  | users.views          | views.py:48   | form_invalid         | Failed registration attempt. Errors: {"password2": [{"message": "This field is required.", "code": "required"}]}
+2026-05-12 11:25:49 | WARNING  | users.auth_views     | auth_views.py:26   | form_invalid         | Failed login attempt for user 'testuser'
+2026-05-12 11:25:51 | WARNING  | users.views          | views.py:75   | dispatch             | User 'testuser' attempted to view restricted profile of 'testuser2'
+2026-05-12 11:25:51 | WARNING  | users.views          | views.py:183  | custom_403           | 403 Forbidden for user 'Петров Иван' accessing /users/2/
+2026-05-12 11:25:51 | WARNING  | django.request       | log.py:249  | log_message          | Forbidden (Permission denied): /users/2/
+Traceback (most recent call last):
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/.venv/lib/python3.14/site-packages/django/views/generic/base.py", line 106, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitalijloznicenko/Documents/3 курс/методы программирования/courses_catalog/users/views.py", line 78, in dispatch
+    raise PermissionDenied('Вы не можете просматривать профиль этого пользователя.')
+django.core.exceptions.PermissionDenied: Вы не можете просматривать профиль этого пользователя.
+2026-05-12 11:25:52 | WARNING  | users.views          | views.py:140  | add_friend           | User 'testuser' tried to add themselves as friend
